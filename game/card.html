@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>扑克牌</title>
+</head>
+<!--编程思路-->
+<!--给定一副牌，一到十三，给定花色，共52张-->
+<!--洗牌，打乱牌的顺序-->
+<!--比较牌的大小，两种比较，数字大小比较，数字相同下花色比较-->
+<!--定义庄家和农民，通过叫牌决定牌的数量和先手出牌-->
+<!--发牌-->
+<!--定义出牌方式，连对，顺子，飞机，炸弹，单张，一对-->
+<!--记牌数，不重复-->
+<!--出牌，比较大小-->
+<!--规则，庄家农民牌数为零则结束游戏-->
+<!--赢加分，输减分-->
+<body>
+
+    
+</body>
+<script>
+    //给定一副牌
+var spadeAllcard=[1,2,3,4,5,6,7,8,9,10,11,12,13];//黑桃
+var diamondsAllcard=[1,2,3,4,5,6,7,8,9,10,11,12,13];//方块
+var redheartAllcard=[1,2,3,4,5,6,7,8,9,10,11,12,13];//红心
+var plumAllcard=[1,2,3,4,5,6,7,8,9,10,11,12,13];//梅花
+var allcard=[spadeAllcard+diamondsAllcard+redheartAllcard+plumAllcard]
+//洗牌
+
+
+//比较牌大小
+               /* var max;
+　　　　　　　//遍历数组，默认arr中的某一个元素为最大值，进行逐一比较
+            for(var i=0; i<allcard.length; i++){
+　　　　　　　　　　//外层循环一次，就拿arr[i] 和 内层循环arr.legend次的 arr[j] 做对比
+                for(var j=i; j<allcard.length; j++){
+                    if(allcard[i]<allcard[j]){
+                        //如果arr[j]大就把此时的值赋值给最大值变量max
+　　　　　　　　　　　　　　 max=allcard[j];
+                        allcard[j]=allcard[i];
+                        allcard[i]=max;
+                    }
+                }
+            }
+            document.write(allcard.toString()+"<br>"); 
+　　　　　　　//200,100,34,13,7,4,3
+*/
+for(var i=0; i<allcard.length; i++){
+    if(spadeAllcard[i]==diamondsAllcard[i]||spadeAllcard[i]==redheartAllcard||spadeAllcard[i]==plumAllcard[i]||redheartAllcard[i]==diamondsAllcard[i]||redheartAllcard[i]==plumAllcard[i]||plumAllcard[i]==diamondsAllcard[i]){
+        spadeAllcard[i]>redheartAllcard[i]>plumAllcard[i]>diamondsAllcard[i];
+        
+    }
+}
+//定义庄家和农民
+var house=[];
+var farmer1=[];
+var farmer2=[];
+ house+farmer1+farmer2==allcard;
+ 
+//发牌
+</script>
+</html>
