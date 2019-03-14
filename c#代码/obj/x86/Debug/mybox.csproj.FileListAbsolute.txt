@@ -1,0 +1,2 @@
+C:\Users\shinelon\Documents\GitHub\js-practice\c#代码\obj\x86\Debug\mybox.Form1.resources
+C:\Users\shinelon\Documents\GitHub\js-practice\c#代码\obj\x86\Debug\mybox.csproj.GenerateResource.Cache
