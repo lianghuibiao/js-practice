@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas画地图</title>
+</head>
+<body>
+    <canvas width="600" height="600" id="myCanvas">
+
+
+    </canvas>
+</body>
+
+<script>
+var c=document.getElementById("myCanvas");//获取画板权限
+var ctx=c.getContext("2d");
+
+//ctx.fillStyle="#FF0000";
+//ctx.fillRect(0,0,150,75);
+for(var i=0;i<=6;i++){
+ctx.moveTo(100*i,0);
+ctx.lineTo(100*i,600);
+ctx.moveTo(0,100*i);
+ctx.lineTo(600,100*i);
+ctx.stroke();
+}
+//创建可移动格子位置
+//画出格子
+//var box_width=100;
+//var box_height=100;
+ctx.fillStyle = "red"; 
+ctx.fillRect(200, 200, 100, 100);
+
+
+</script>
+</html>
