@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #a{
+        background-color: aqua;
+       
+        text-align: center;
+        margin-left: 150px;
+        width: 200px;
+        height: 50px;;
+    }
+    #my{
+        line-height: 250px;
+        float: left;
+        text-align: center;
+        font-size: 60px;
+        width: 200px;
+        height: 250px;
+        border:20px solid red;
+    }
+    #you{
+        line-height: 250px;
+        float:right;
+        text-align: center;
+        font-size: 60px;
+        width: 200px;
+        height: 250px;
+        border:20px solid red;
+    }
+    #demo{
+        text-align: center;
+       margin-left: 150px;
+        font-size: 60px;
+        width: 200px;
+        height: 100px;
+        border: 5px solid black;
+    }
+    #box{
+        margin:0 auto;
+        padding: 0;
+
+        width: 500px;
+        height: 700px;
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>1.比较数字大小</h1>
+    
+    <div id="box">
+<div id="e"><div id="demo"></div></div>
+<div id="b"><div id="my"></div></div>
+<div id="c"><div id="you"></div></div>
+ <button id="a" type="button" onclick="myFunction()">点击比较大小</button>
+ <button type="button" onclick="text()" >游戏说明</button>
+<p id="text"></p>
+</div>
+
+</body>
+<script>
+    var i,j,b,n,m;
+   
+  var a=[1,2,3,4,5,6,7,8,9,10,11,12,13];
+  var b=[1,2,3,4,5,6,7,8,9,10,11,12,13];
+  /*for(var i=0;i<=12;i++){
+      if(a[i]<5){
+          console.log(a[i]);
+      }
+  }*/
+  function myFunction(){
+	var x=document.getElementById("demo");
+    var y=document.getElementById("my");
+    var z=document.getElementById("you");
+        i=Math.floor((Math.random()*10)+3);
+        j=Math.floor((Math.random()*10)+3);
+        
+        y.innerHTML=a[i];
+        z.innerHTML=b[j];
+        if(a[i]>b[j]){
+        
+        x.innerHTML="我赢了";
+        }
+        if(a[i]<b[j]){
+           
+         x.innerHTML="你赢了";
+        }
+        if(a[i]==b[j]){
+        
+        x.innerHTML="平局";
+       }
+    
+}
+function text(){
+    var a=document.getElementById("text");
+
+    a.innerHTML="从13个数字中随机抽取一个，比较大小，点击比较大小的按钮可触发并比较,左边我方，右边为对方";
+}
+</script>
+</html>
