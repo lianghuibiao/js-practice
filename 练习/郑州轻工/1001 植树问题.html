@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 某学校植树节开展植树活动，已知树苗有m株，参加植树的同学有n人（且m>n），请问每位同学平均可以植树几株？还有几株剩余？ 
+		 * 输入两个整数m和n，分别表示树苗的数量和学生的人数（m>n）。 
+		 * 输出两个整数，分别表示每位同学平均植树的数量及剩余的树苗数量。 
+		 * 
+		 * */
+		var m=prompt("树苗的数量");
+		var n=prompt("学生的人数");
+//		var a=prompt("平均植树的数量");
+//		var b=prompt("剩余的树苗数量");
+			var a=m/n;
+			a=Math.floor(a);
+		alert(a+" "+m%n);
+	
+		
+	</script>
+</html>

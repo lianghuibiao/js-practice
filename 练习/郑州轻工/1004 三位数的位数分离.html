@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 从键盘输入一个任意的三位正整数，分别求出其个位、十位和百位上的数字。 
+		 * 输入任意的一个三位正整数。 
+		 * 依次输出个位、十位、百位上的数字。以空格间隔，但最后一个数据的后面没有空格，直接换行。 
+		 * 
+		 * 
+		 * */
+		var num1=+prompt("输入一个数");
+		//输出百位数
+		var a=num1/100;
+		a=Math.floor(a);
+		//输出十位数
+		var b=num1/10%10;
+		b=Math.floor(b);
+		//输出个位数
+		var c=num1%100%10;
+		alert(c+" "+b+" "+a);
+		
+		
+		
+	</script>
+</html>

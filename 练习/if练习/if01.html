@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 从键盘上输入小明的成绩
+		 * 当成绩为100时 奖励宝马一台
+		 * 当成绩为80到99时  奖励一台手机
+		 * 当成绩六十到八十  奖励参考书
+		 * 其他的情况什么都没有
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		var score=prompt("输入小明的期末成绩1~100");
+		//判断值是否合法
+		if(score>100||score<0||isNaN(score)){
+			alert("拉出去毙了");
+		}else{
+			if(score==100){
+			//奖励一台宝马
+			alert("宝马拿去");
+		}else if(score>=80){
+			alert("奖励一台手机");
+		}else if(score>=60){
+			alert("奖励参考书");
+			
+		}else{
+			alert("奖励棍子一根");
+		}
+	
+		}
+		
+	</script>
+</html>
