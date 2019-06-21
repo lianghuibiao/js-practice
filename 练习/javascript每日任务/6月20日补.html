@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>基本功能</title>
+</head>
+<style>
+#color{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position:absolute;
+    position: relative;
+}
+button{
+    
+    position:absolute;
+    
+}
+#a{
+    margin-top: 300px;
+}
+#b{
+    margin-top: 300px;
+    margin-left: 100px;
+
+}
+#c{
+    margin-top: 300px;
+    margin-left: 200px;
+}
+#d{
+    margin-top: 300px;
+    margin-left: 300px;
+}
+#e{
+    margin-top: 300px;
+    margin-left: 400px;
+}
+#f{
+    margin-top: 300px;
+    margin-left: 500px;
+}
+#g{
+    margin-top: 300px;
+    margin-left: 600px;
+}
+#h{
+    margin-top: 300px;
+    margin-left: 700px;
+}
+#i{
+    margin-top: 300px;
+    margin-left: 800px;
+  
+}
+
+</style>
+<body>
+    <div id="color" onclick="right()"></div>
+    <button id="a" onclick="color()">变色</button>
+    <button id="b" onclick="left()">左边移动</button>
+    <button id="c" onclick="right()">右边移动</button>
+    <button id="d" onclick="big()">变大</button>
+    <button id="e" onclick="s()">变小</button>
+    <button id="f" onclick="text()">出现字</button>
+    <button id="g" onclick="border()">边框</button>
+    <button id="h" onclick="show()">显示</button>
+    <button id="i" onclick="hide()">禁用</button>
+</body>
+<script>
+var q=document.getElementById("color");
+function color(){
+    q.style.backgroundColor="red";
+}
+//移动  颜色  大小  文字  
+function left(){
+    var q=document.getElementById("color");
+    q.style.left=q.offsetLeft-20+"px";
+}
+function right(){
+    var q=document.getElementById("color");
+    q.style.left=q.offsetLeft+20+"px";
+}
+function big(){
+    var q=document.getElementById("color");
+    q.style.width=120+"px";
+    q.style.height=120+"px";
+}
+function s(){
+    var q=document.getElementById("color");
+    q.style.width=50+"px";
+    q.style.height=50+"px";
+}
+function text(){
+    q.innerHTML="这个是显示文字的";
+}
+function border(){
+   q.style.borderRadius=20+"px";
+}
+function show(){
+    q.style.display="block";
+}
+function hide(){
+    q.style.display="none";
+ 
+}
+
+</script>
+</html>
