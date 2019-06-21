@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>贪食蛇</title>
+</head>
+<style>
+#background{
+  width: 600px;
+	height: 600px;
+  background-color: antiquewhite;
+	margin:0 auto;padding:0;
+}
+	#box{
+		width: 450px;
+		height: 450px;
+		background-color:hsla(350,43%,97%,1.00);
+		border:10px solid hsla(95,89%,49%,1.00);
+		
+	}
+	#t{
+		width: 15px;
+		height: 15px;
+		background-color: hsla(127,93%,50%,1.00);
+	}
+</style>
+<body id="background">
+	<canvas id="box">
+		<div id="t"></div>
+	</canvas>
+</body>
+	<script>
+	var c=document.getElementById("box");
+var ctx=c.getContext("2d");
+		var x=0;
+		var y=0;
+		var a=15;
+		var b=15;
+		var c=0;
+		var d=15;
+		var snake=[6];
+		//画线
+		for(var i=0;i<30;i++){
+			ctx.lineWidth:1;
+			ctx.beginPath();
+			x=x+15;
+ ctx.moveTo(x+0.5,0);
+ctx.lineTo(x+0.5,450);
+ctx.moveTo(0,x+0.5);
+ctx.lineTo(450,x+0.5);
+ctx.stroke(); 	
+		}
+		//创建一个蛇
+		for(var i=0;i<snake;i++){
+			ctx.beginPath();
+			c=c+a;
+			ctx.rect(0,0,450,450);
+			ctx.fillRect(0,0,c,d);
+			ctx.fillStyle="yellow";
+			 
+		}
+		//创建蛇头
+		
+		//设置食物随机生成
+		function fool(){
+	var x=document.getElementById("t")
+	x.getContext=Math.floor((Math.random()*30)*15);
+			fool();
+		}
+		
+		//监听键盘
+		function myfunction(e){
+			
+			switch(e||window.Event){
+				case 37:   break;//向上
+					case 38:   break;//向左
+					case 39:   break;//向下
+					case 40:   break;//向右
+					myfunction(e);
+			}
+		}
+
+	</script>
+</html>

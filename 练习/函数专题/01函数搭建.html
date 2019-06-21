@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 函数建立
+		 * 函数都是obje
+		 * 
+		 * 
+		 * */
+		var a=10;
+		var c;
+		var a=new Object;//建立一个对象   对象，从堆变量中开辟一个新的区域
+		//函数调用方式this方法调用函数
+		function fun(){
+			console.log(this.name);
+			
+		}
+		var obj={
+			name:"孙悟空",
+			age:18,
+			sayName:fun
+		
+		};
+		//this函数方法执行
+		obj.sayName();
+		//通过建立函数来使问题简化
+		//console.log(a);
+		//alert(a);
+		
+		
+		
+	</script>
+</html>

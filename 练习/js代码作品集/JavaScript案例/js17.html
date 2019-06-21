@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id="dome">单击执行五次</p>
+    <button type="button" onclick="myfunction()">点击</button>
+</body>
+<script>
+    function myfunction(){
+for(var i=0;i<=5;i++){
+    x="这个是第"+i+"次显示";
+    document.getElementById("dome").innerHTML=x;
+}
+    }
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<body>
+    <div id="app">
+        <!-- <p>{{ message }}</p> -->
+        <div v-html="message"></div>
+        <!-- 使用 v-html 指令用于输出 html 代码： -->
+      </div>
+      
+     
+</body>
+<script>
+    new Vue({
+        //vue框架安装完成   开始编写vue代码
+      el: '#app',
+      data: {
+        message: '<h1>Hello Vue.js!</h1>'   //这个值是上面body的值   被插进双大括号里
+      }
+    })
+    //数据绑定最常见的形式就是使用 {{...}}（双大括号）的文本插值：
+    </script>
+</html>

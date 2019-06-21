@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	
+	<script type="text/javascript">
+		var name="全局";
+		function fun(){
+			console.log(this.name);
+		}
+		var obj={
+			name:"孙悟空",
+			sayName:fun
+		};
+		var obj2={
+			name:"沙和尚",
+			sayName:fun
+		};
+		obj.sayName();//直接调用谁调用就是了
+	</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#box{
+    width: 450px;
+    height: 450px;
+    border: 5px solid black;
+    box-shadow: 5px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  
+}
+#button{
+    width: 250px;
+    height: 40px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    align-content: center;
+}
+.input{
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    
+}
+#move{
+    width: 251px;
+    height: 111px;
+    margin-left: 150px;
+    margin-top: 120px;
+    }
+#picture{
+    width: 150px;
+    height: 450px;
+    float: left;
+   
+}
+</style>
+<body>
+   
+    <div id="box">
+        <img src="kenan.jpg" id="picture">
+        
+        <h1>1.登陆界面</h1>
+        <div id="move">
+                <form name="login" onsubmit="javascript:return chkfrm(this);">
+ 账号：<input type="text" class="input" value="" id="one" name="one"><br>
+ 密码：<input type="text"  class="input" value="" id="two" name="two">
+ <input type="submit" id="button" onclick="ok()" value="登陆">
+</div>
+    </div>
+</form>
+</body>
+
+<script>
+  function chkfrm(o){
+    if(o.two.value==''){
+        alert('请输入密码！');
+        return false;
+        }
+        if(o.one.value==''){
+            alert('请输入用户名！');
+            return false;
+        }
+        if(o.one.value=='123456'&&o.two.value=='123'){
+        alert('登陆成功');
+        return false;
+        }
+        else{
+        alert('登陆失败');
+        return false;
+        }
+        
+        }
+        
+        
+        
+</script>
+</html>

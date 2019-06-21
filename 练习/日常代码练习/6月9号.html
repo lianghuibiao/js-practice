@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="add(1)">点击就有不同的结果</button>
+    <button onclick="add(1,2)">111点击就有不同的结果</button>
+</body>
+<script>
+function myfunction(){
+    alert(arguments.length);
+}
+//myfunction("string",45);
+//myfunction("aa",01);
+//函数参数方法  支持多个  一个参数   毫无怨言
+//arguments语句   本方法的语句   
+function add(){
+    if(arguments.length==1){
+        alert(arguments[0]+10);
+    }
+    else if(arguments.length==2){
+       alert(arguments[0]+arguments[1]);
+    }
+}
+////add(1);
+//add(1,2);
+
+</script>
+</html>

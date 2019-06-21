@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+        <div id="app">
+            {{5+5}}<br>
+            {{ ok ? 'YES' : 'NO' }}<br>
+            {{ message.split('').reverse().join('') }}
+            <div v-bind:id="'list-' + id">菜鸟教程</div>
+        </div>
+            
+        <script>
+            //Vue.js 都提供了完全的 JavaScript 表达式支持。
+        new Vue({
+          el: '#app',
+          data: {
+            ok: true,
+            message: 'RUNOOB',
+            id : 1
+          }
+        })
+        </script>
+        </body>
+</html>

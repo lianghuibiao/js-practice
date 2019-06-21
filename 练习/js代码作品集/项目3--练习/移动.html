@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>move</title>
+</head>
+<style>
+#aaa{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: absolute;
+}
+
+.a{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+.b{
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+</style>
+<body>
+    <div class="a">
+    <div id="aaa">
+    </div>
+</div>
+<div class="b">
+    <button type="button" onclick="moveleft()">点击向左移动</button>
+    <button type="button" onclick="moveright()">点击向右移动</button>
+    <button type="button" onclick="moveup()">点击向上移动</button>
+    <button type="button" onclick="movedown()">点击向下移动</button>
+</div>
+</body>
+<script>
+    function moveleft(){
+   var a=document.getElementById("aaa");
+   a.style.left=a.offsetLeft-20+"px";
+
+    }
+    function moveright(){
+   var a=document.getElementById("aaa");
+   a.style.left=a.offsetLeft+20+"px";
+
+    }
+    function moveup(){
+   var a=document.getElementById("aaa");
+   a.style.top=a.offsetTop-20+"px";
+
+    }
+    function movedown(){
+   var a=document.getElementById("aaa");
+   a.style.top=a.offsetTop+20+"px";
+
+    }
+
+
+</script>
+</html>

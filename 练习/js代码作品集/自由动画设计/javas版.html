@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>飞机大战</title>
+</head>
+
+	<style>
+		.a{
+			background-color: hsla(172,93%,50%,1.00);
+			color: hsla(359,94%,49%,1.00);
+			text-align: center;
+			font-size: 35px;
+			margin:0 auto; padding:0;
+			text-align: center;
+            text-decoration: none;
+		    align-content: center;
+			width: 1000px;
+			height: 50px;
+		}
+		.background{
+		margin:0 auto; padding:0;
+		align-content: center;
+		width: 800px;height: 500px;
+		background-color: hsla(0,0%,86%,1.00);
+		background-image: url(飞机图片背景.jpg);
+		
+		}
+		.d{
+			margin-left: 50px;
+		}
+		.text{
+			width: 1000px;
+			height: 50px;
+			margin: 0 auto;padding: 0;
+			align-content: center;
+			text-align: center;
+			font-size: 30px;
+			color: hsla(359,93%,48%,1.00);
+		}
+		.plane{
+			position:absolute;
+			width:800px;height:155px;bottom:0;
+			align-content: center;
+		}
+		.picture{
+			width: 100px;
+			height: 100px;
+			top: 0px;
+			position: absolute;
+		}
+		.zuozhe{
+			text-align: center;
+		}
+		.button{
+	background-color:hsla(26,79%,55%,1.00);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin-left: 600px;
+			
+		}
+		.button1{
+					background-color:hsla(26,79%,55%,1.00);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+			margin-left: 0px;
+		
+		}
+		.game{
+			width: 800px;
+			height: 50px;
+			margin:0 auto; padding:0;
+		align-content: center;
+		}
+		.dropdown{
+		text-align: center;
+				margin:0 auto; padding:0;
+		align-content: center;
+			
+		}
+		.otherplane{
+			width:; height:100px;
+		}
+		.tank{
+			width: 100px;
+			height: 100px;
+			margin-left: 250px;
+		}
+		
+  
+		#f{
+			width: 10px;
+			height: 10px;
+			background-color: hsla(63,86%,50%,1.00);
+		}
+
+	</style>									
+
+	
+<body>
+	<div class="a">游戏设计与开发</div>
+	<p class="text">1.飞机大战</p>
+	<div class="game"><p>游戏介绍：通过操作键盘的↑或↓或←或→可以达到控制飞机向上，向下，向左，向右的目的，按A可发射炮弹，当炮弹击中敌方飞机时可击毁敌机,还可以点击难度选择来选择你喜欢的难度，祝你游戏愉快！</p></div>
+	
+	<h1 class="zuozhe">设计者：梁辉标</h1>
+	<div>
+		<button class="button"><a href="javas版.html">开始游戏</a></button>
+		<button class="button1"><a href="Untitled-2.html">再来一次</a></button>
+	
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">难度
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">简单</a></li>
+      <li role="presentation"><a role="menuaitem" tabindex="-1" href="#">中等</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">困难</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">地狱</a></li>
+    </ul>
+  </div>
+	<p class="p"></p>
+	<div class="background">
+		
+	<div class="plane">
+	
+		<div><div id="x"></div><img src="飞机.jpg" id="id" width="100" height="100" style="position:absolute; left: 50px;top: 0px;"></div>
+	</div>
+	<div class="d">
+		<img class="otherplane" src="敌机.jpg"><img class="open1" src="飞机+敌机.jpg"></div>
+	
+	<div class="e">
+		
+	</div>
+	<div id="f"></div>
+	</div>
+	<a href="坦克大战.html"><img class="tank" src="坦克大战图标.jpg"></a>
+</body>
+
+<script type="text/javascript">
+	document.onkeydown = function(e){
+    var obj = document.getElementById("id");
+    var x = obj.offsetLeft;
+    var y = obj.offsetTop;
+    switch ((e||event).keyCode) {
+        case 37: x=x-15; break;
+        case 39: x=x+15; break;
+        case 38: y=y-15; break;
+        case 40: y=y+15; break;
+    }
+    obj.style.left =x+"px"
+    obj.style.top =y+"px";}
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#f").animate();
+		});
+	});
+	
+</script>
+</html>

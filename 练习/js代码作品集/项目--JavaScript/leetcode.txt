@@ -1,0 +1,92 @@
+
+两个数组  找相同
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function(nums1, nums2) {
+  var a=[]
+  for(var i=0;i<nums1.length;i++){
+      for(var j=0;j<nums2.length;j++){
+          if(!a.includes(nums1[i])&&nums1[i]==nums2[j]) {//string.includes()
+              a.push(nums1[i])
+              break
+          }
+      }
+  }
+ return a ;
+};
+
+各个位数相加
+var addDigits = function(num) {
+  return  ((num-1)%9)+1;
+    
+};
+
+
+找众数
+var majorityElement = function(nums) {
+   var a =[];
+   for(var i=0;i<=nums.length;i++){
+       if(!a[nums[i]]){
+           a[nums[i]]=1;
+       }
+       else{
+            a[nums[i]]++;
+       }
+       if(a[nums[i]]>nums.length/2){
+           console.log(nums[i]);
+       }
+   }
+};
+majorityElement([2,2,1,1,1,2,2])
+转置矩阵
+var transpose = function(A) {
+var a=new Array();
+for (var i = 0; i < A[0].length; i++) {
+	a[i] = new Array();
+}
+	for(var i=0;i<A.length;i++){
+ 		
+		for(var j=0;j<A[0].length;j++)
+		{
+			a[j][i] = A[i][j];
+			
+		}
+		
+		}
+		return a;
+ };
+ 斐波那契数
+
+var fib = function(N) {
+    var arr=[];
+	 arr[0]=0;
+	 arr[1]=1;
+    for(var i=2;i<=N;i++){
+    	arr[i]=arr[i-1]+arr[i-2];
+    }
+    return arr[N];
+    
+};
+找两句话中不常见的单词
+var uncommonFromSentences = function(A, B) {
+    let newStr=(A+' '+B).split(' ');
+    let count={};
+    let res=[];
+    for(let i=0;i<newStr.length;i++){
+        if(count[newStr[i]]){
+            count[newStr[i]]+=1;
+        }else{
+            count[newStr[i]]=1;
+        }
+    }
+    for(let k in count){
+        if(count[k]==1){
+            res.push(k)
+        }
+    }
+    return res;
+};
+

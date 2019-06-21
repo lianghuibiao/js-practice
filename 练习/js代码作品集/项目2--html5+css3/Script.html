@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#aaa{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: absolute;
+}
+.a{
+    margin-left: 200px;
+}
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: absolute;
+}
+#bbb{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: absolute;
+
+}
+button{
+    margin-top: 300px;
+}
+
+
+</style>
+<body>
+       <!-- <input  type='button' value='开始运动'  onclick="starMove()"/>  -->
+
+    <div id="aaa"></div>
+    
+    <!--<div id="div1"></div>-->
+    <button onclick="myfunction()" type="button" class="a">右边走起</button>
+    <button onclick="mybox()" type="button" class="a">左边走起</button>
+    <button onclick="move()" type="button" class="a">左边走起</button>
+</body>
+<script>
+function myfunction(){
+    var box=document.getElementById("aaa");
+    
+   box.style.left=box.offsetLeft+20+"px";
+   
+}
+var timer = null;
+function mybox(){
+    var box1=document.getElementById("aaa");
+    timer = setInterval(function() {
+        var sd = 1;
+ 
+        if (box1.offsetLeft >= 1500) {
+            clearInterval(timer);
+        } else {
+            box1.style.left =box1.offsetLeft + sd + 'px';
+        }
+       
+    },
+    10);
+}
+function move(){
+    var move=document.getElementById("aaa");
+    timer = setInterval(function() {
+        var sd = 1;
+ 
+        if (box1.offsetLeft >= 1000) {
+            clearInterval(timer);
+        } else {
+          box1.style.color=box1.color+"red";
+        }
+       
+    },
+    10);
+
+}
+   
+  
+
+/*
+获取计时使盒子移动
+
+
+var timer = null;
+function starMove() {
+    var oDiv = document.getElementById('div1');
+ 
+    timer = setInterval(function() {
+        var sd = 1;
+ 
+        if (oDiv.offsetLeft >= 3000) {
+            clearInterval(timer);
+        } else {
+            oDiv.style.left = oDiv.offsetLeft + sd + 'px';
+        }
+    },
+    10);
+}
+ 
+*/
+
+</script>
+</html>

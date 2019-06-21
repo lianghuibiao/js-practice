@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<style>
+* {
+        margin: 0;
+        padding: 0;
+    }
+ 
+    nav {
+        width: 1000px;
+        margin: 100px auto;
+    }
+ 
+    ul {
+        list-style: none;
+    }
+ 
+    nav .list {
+        position: relative;
+    }
+ 
+        nav .list .item {
+            width: 199px;
+            height: 50px;
+            float: left;
+            border-right: 1px solid #696969;
+            background: #ddd;
+            line-height: 50px;
+            text-align: center;
+        }
+ 
+    .sub_list {
+        display: none;
+        position: absolute;
+        width: 1000px;
+        height: 150px;
+        left: 0;
+        top: 50px;
+        background: pink;
+    }
+ 
+        .sub_list li {
+            width: 100px;
+            height: 100px;
+            margin: 30px 10px;
+            float: left;
+        }
+ 
+    .red li {
+        background: red;
+    }
+ 
+    .blue li {
+        background: blue;
+    }
+ 
+    .green li {
+        background: green;
+    }
+
+</style>
+<body>
+	<nav>
+        <ul class="list">
+            <li class="item">
+                小米手机
+                <div class="sub_list">
+                    <ul class="red">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item">
+                红米手机
+                <div class="sub_list">
+                    <ul class="blue">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item">
+                电视
+                <div class="sub_list">
+                    <ul class="green">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item">盒子</li>
+            <li class="item">平板</li>
+        </ul>
+    </nav>
+</body>
+<script>
+ $(document).ready(function () {
+        var inNav=false
+        $("nav").hover(function () { setTimeout(function () { inNav = true }, 10); }, function () {inNav=false })
+        $("nav .list .item").hover(function () {
+            index = $(this).index();
+            inNav = $(".sub_list").eq(index).stop(true, true)[inNav ? 'show' : 'slideDown']().length > 0;
+        }, function (e) {
+            var t =$( e.relatedTarget);
+            if (!t.hasClass('item') || t.find('.sub_list').length == 0) inNav = false;//移动到没有子菜单
+            $(".sub_list").eq(index).stop(true,true)[inNav ? 'hide' : 'slideUp']();
+        })
+    })
+
+</script>
+</html>

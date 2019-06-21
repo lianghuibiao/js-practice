@@ -1,0 +1,188 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>动画制作</title>
+</head>
+
+	<style>
+	#ture{
+  width:100px;
+  height:100px;
+  background-color:blue;
+   position:relative;
+}
+#left{
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#right{
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#big{
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#small{
+  background-color: red;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#turebig{
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#turesmall{
+  background-color:blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.a{
+  width:500px;
+  height:500px;
+}
+#change{
+  background-color:blue;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+	</style>
+	
+<body>
+
+<div id="q">
+  
+<p id="ture">
+
+</p>
+<div class="a">
+  
+
+<button id="left">
+  向左移动
+</button>
+<button id="right">
+ 向右移动
+</button>
+<button id="big">
+  变大动画
+</button>
+<button id="small">
+    变小动画
+  </button>
+<button id="turebig">
+  变大
+</button>
+<button id="turesmall">
+  变小
+</button>
+  <button id="change">
+   上下滑动
+  </button>
+
+  </div>
+  </div>
+	
+	
+	
+	
+	
+	
+</body>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script>
+	var fooPosLeft = 0;
+$('#left').click(function (evt){
+  fooPosLeft -= 10;
+  $('#ture').css({'left': fooPosLeft + 'px'});
+});
+var fooPosLeft = 0;
+$('#right').click(function (evt){
+  fooPosLeft += 10;
+  $('#ture').css({'left': fooPosLeft + 'px'});
+});
+$(document).ready(function(){
+  $('#big').click(function(){
+    $('#ture').animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'150px',
+      width:'150px'
+    });
+  });
+});
+$(document).ready(function(){
+  $('#small').click(function(){
+    $('#ture').animate({
+      left:'250px',
+      opacity:'0.5',
+      height:'50px',
+      width:'50px'
+    });
+  });
+});
+$(document).ready(function(){
+  $('#turesmall').click(function(){
+    $('#ture').animate({
+      height:'50px',
+      width:'50px'
+    });
+  });
+});
+$(document).ready(function(){
+  $('#turebig').click(function(){
+    $('#ture').animate({
+      height:'150px',
+      width:'150px'
+    });
+  });
+});
+$(function(){
+$('#change').click(function(){
+$('#ture').animate({height:'toggle'});
+});
+});
+	</script>	
+
+</html>

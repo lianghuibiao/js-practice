@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>计算机</title>
+ <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+   <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+   <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+	<style>
+	.a{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+		border-radius:25px;
+}
+		.location{
+			margin: 0 auto;
+			padding: 0;
+			text-align: center;
+			width: 1200px;
+			height: 1200px;
+			background-color: antiquewhite;
+			
+		}
+		.q{
+			margin-left: 100px
+		}
+		.p{
+			background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 140px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius:25px;
+		}
+		#number{
+	
+        font-size: 30px;
+    
+			width: 325px;
+			height: 45px;
+		}
+		
+		#ture{
+			border:2px solid #a1a1a1;
+	        padding:10px 40px; 
+	        background:hsla(37,7%,79%,1.00);
+			width:400px;
+			border-radius:25px;
+			text-align: center;
+			
+		
+		}
+		.posision{
+			margin: 0 auto;padding: 0;
+			border: 0;
+			text-align: center;
+		}
+	
+	</style>
+<body class="location">
+<div  class="col-md-offset-4 col-lg-9 col-xs-6 col-sm-4" id="ture" >
+	<h1>1、计算器</h1>
+  <p>作者：梁辉标</p>
+  
+<input id="number" type="text"  size="45" />
+<table width="190"; class="posision">
+  <tbody>
+    <tr>
+		<td><input type="button" onclick="add(this)" value="1" class="a" /></td>
+      <td><input type="button"  onclick="add(this)" value="2" class="a"/></td>
+      <td><input type="button" onclick="add(this)" value="3" class="a"/></td>
+      <td><input type="button" onclick="add(this)" value="-" class="a"/></td>
+    </tr>
+    <tr>
+      <td><input type="button"  onclick="add(this)" value="4" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="5" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="6" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="+" class="a"/></td>
+    </tr>
+    <tr>
+      <td><input type="button"  onclick="add(this)" value="7" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="8" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="9" class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="*" class="a"/></td>
+    </tr>
+    <tr>
+    
+      <td><input type="button"  onclick="add(this)" value="." class="a"/></td>
+      <td><input type="button"  onclick="add(this)" value="0" class="a"/></td>
+     <td><input type="button"  onclick="results()" value="=" class="a"/></td>
+     <td><input type="button"  onclick="add(this)" value="/" class="a"/></td>
+    </tr>
+  </tbody>
+</table>
+  <table class="posision">
+<td>
+<input type="button" onclick="clears()" id="Button11" value="清零" class="p" />
+</td>
+</table>
+	</div>
+</body>
+<script>
+function add(num){
+    document.getElementById("number").value+=num.value;	
+    }
+function results()
+{
+
+var num=document.getElementById("number").value;
+if(num.indexOf("=")<0)
+document.getElementById("number").value+="="+eval(num);
+}
+function clears()
+{
+document.getElementById("number").value="";
+}
+	
+	</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .class1{
+      background: #444;
+      color: #eee;
+    }
+    </style>
+    <body>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    
+    <div id="app">
+      <label for="r1">修改颜色</label><input type="checkbox" v-model="use" id="r1">
+      <br><br>
+      <div v-bind:class="{'class1': use}">
+        v-bind:class 指令   
+      </div>
+    </div>
+    <div id="app1">
+            <p v-if="seen">现在你看到我了</p>
+            <!-- 这个  V-if的语法是承接着布尔的   true  false    通过这样来显示要显示的内容 -->
+            <template v-if="ok">
+              <h1>菜鸟教程</h1>
+              <p>学的不仅是技术，更是梦想！</p>
+              <p>哈哈哈，打字辛苦啊！！！</p>
+            </template>
+        </div>
+    <script>
+        //HTML 属性中的值应使用 v-bind 指令。
+    new Vue({
+        el: '#app',
+      data:{
+          use: false
+      }
+    });
+    new Vue({
+  el: '#app1',
+  data: {
+    seen: true,
+    ok: true
+  }
+})
+    </script>
+</html>

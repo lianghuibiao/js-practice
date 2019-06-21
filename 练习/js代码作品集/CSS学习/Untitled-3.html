@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+<body>
+<div class="ture" style="width: 100px;height: 100px;background-color: red"></div>
+	<p id="change">输出hello</p>
+	<p class="left">
+	  <button type="button" onClick="myFunction()">点击</button>
+    nihao</p>
+	<script>
+		function myFunction()
+		{
+	    document.getElementById('change').innerHTML="nihao";
+		var x = document.getElementsByClassName('left')
+		console.log(x);
+		var i;/*创建一个数*/
+for (i = 0; i < x.length; i++) {/*循环语句*/
+    x[i].innerHTML = "red";/*创建数组*/
+}
+		}
+	</script>
+</body>
+</html>

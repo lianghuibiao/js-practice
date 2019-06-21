@@ -1,0 +1,49 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>显示一些按钮，如果点击了，
+ 当前点击的按钮文本变为“点了”，其他按钮文本变为“没点”</title>
+ <script type="text/javascript">
+ //为所有按钮动态添加事件
+ function IniButtonEvent() {
+  var Items = document.getElementsByTagName("input");
+  for (var i = 0; i < Items.length; i++) {
+  var objTmp = Items[i];
+  if (objTmp.type == "button") {
+   objTmp.onclick = ButtonClick;
+  }
+  }
+ }
+ function ButtonClick() {
+  var Items = document.getElementsByTagName("input");
+  for (var i = 0; i < Items.length; i++) {
+  var objTmp = Items[i];
+  if (objTmp.type == "button") {
+  //判断是否是按钮
+   //window.event.srcElement触发当前事件的元素
+   //用来判断是否是当前单击的按钮
+   if (objTmp == window.event.srcElement) {
+     var a="点了"
+    objTmp.value =a;
+   
+   }
+   else {
+   
+    objTmp.value = ""; 
+   }
+
+  }
+  }
+ }
+ </script>
+</head>
+<body onload="IniButtonEvent()">
+显示一些按钮，如果点击了，当前点击的按钮文本变为“点了”，
+其他按钮文本变为“没点”<br />
+ <input type="button" value="" />
+ <input type="button" value="" />
+ <input type="button" value="" />
+ <input type="button" value="" />
+ <input type="button" value="" />
+</body>
+</html>

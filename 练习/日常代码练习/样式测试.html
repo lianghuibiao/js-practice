@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style> 
+	#last{
+		width: 100px;
+		height: 100px;
+		background-color: aqua;
+		position:absolute;
+	}
+	#qq{
+		margin-left: 300px;
+		margin-top: 300px;
+	}
+	</style>
+	<body id="frist">
+		<div>
+				<div id="last"></div>
+
+
+		</div>
+		<button id="qq" onclick="myMove()">点击向左下角移动</button>
+	</body>
+	<script>
+	// var a=document.getElementById("last");
+	// //获取文档位置
+	// function myfunction(){
+	// 	a.style.left=a.offsetLeft+30+"px";
+
+	// }
+	setTimeout("aa");
+	function myMove() {
+  var elem = document.getElementById("last");   
+  var pos = 0;
+  var id = setInterval(frame, 15);//速度
+  function frame() {
+    if (pos == 350) {
+		pos++; 
+		elem.style.top = -pos + 'px'; 
+      elem.style.left = -pos + 'px'; 
+    } else if(pos<350){
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }else if(pos>600){
+		clearInterval(id);//到位判断停止	
+	}
+  }
+}
+
+	
+//clearInterval(id);//到位判断停止	
+	</script>
+</html>

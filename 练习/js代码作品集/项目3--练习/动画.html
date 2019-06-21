@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#run{
+    width:100px;
+    height: 100px;
+    position:absolute;
+background-color: aqua;
+
+
+}
+.a{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+</style>
+<body>
+    <div class="a">
+    <div id="run">
+    </div>
+</div>
+    <button type="button" onclick="moveright()">移动</button>
+</body>
+<script>
+    var timer = null;
+function moveright(){
+    var a=document.getElementById("run");
+     setInterval(function() { 
+     
+    if(a.offsetLeft<=500||a.offsetTop<=500){
+       
+        a.style.left =a.offsetLeft + 1 + 'px'; 
+        a.style.top=a.offsetTop + 1 + 'px'; 
+    }if(a.offsetLeft>500||a.offsetTop>500){
+        a.style.left =a.offsetLeft - 1 + 'px'; 
+        a.style.top=a.offsetTop + 1 + 'px'; 
+       
+    }
+    },
+    10);
+}
+</script>
+</html>

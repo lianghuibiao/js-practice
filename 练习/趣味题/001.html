@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		.style{
+			width: 100px;
+			height: 100px;
+			background-color: darkgoldenrod;
+		}
+		
+		
+		
+		
+		
+	</style>
+	<body>
+		<div id="door1" class="style"></div>
+		<div id="door2" class="style"></div>
+		<div id="door3" class="style"></div>
+		<button type="button" onclick="">换</button>
+		<button type="button" onclick="">不换</button>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 创建三个门  有两个门后面是羊  一个门后面是跑车
+		 * 你要选择一个门  选了之后  会开启一个门后面是羊的门
+		 * 然后你选择换还是不换  
+		 * 测试换的几率大还是不换的几率大
+		 * 
+		 * 
+		 * 
+		 * */
+		//创建一个概率函数
+		var a=Math.floor(Math.random()*3+1);//会随机出现一到三
+		//三扇门分别是什么
+		var q=document.getElementById("door1");
+		var w=document.getElementById("door2");
+		var e=document.getElementById("door3");
+		var b=0;
+		for(var i=0;i<=3;i++){
+			
+		switch(a){
+		case 1:
+	    q.innerHTML="山羊";
+	     console.log("1");
+			case 2:
+		  w.innerHTML="山羊";
+		console.log("2");
+		case 3:
+		  e.innerHTML="跑车";
+		console.log("3");
+			}
+	}
+		
+	
+		
+		
+		
+		/*switch(b<=3){
+		switch(a){
+		case 1:
+	    q.innerHTML="山羊";
+	     console.log("1");
+		case 2:
+		  w.innerHTML="山羊";
+		console.log("2");
+		case 3:
+		  e.innerHTML="跑车";
+		console.log("3");
+			}
+			
+		 b++;
+		}*/
+		
+		
+		
+		
+		
+
+	</script>
+</html>

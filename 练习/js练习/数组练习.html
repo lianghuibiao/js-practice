@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+	#map{
+	background-color: rosybrown;
+		width: 300px;
+		height: 300px;
+		border-radius: 25px;
+		position: relative;
+       
+	}
+ 
+</style>
+<body>
+   <div id="map">
+   	
+   	
+   	
+   </div>
+   <button type="button" onclick="move()">点击我显示内容</button>
+   <button type="button" onclick="left()">向左</button>
+</body>
+<script>
+	//遍历一维数组
+	//调用
+function myfunction(){
+	var a=[1,2,3,4];
+	for(var i=0;i<=3;i++){
+		console.log(a[i]);
+	}
+}
+myfunction();
+//封装函数表达
+function move(){
+	document.getElementById("map").innerHTML="哈喽，我出现啦";
+	alert("我是aler警告栏 我也来了");
+	
+}
+move();
+function left(){
+	var a=document.getElementById("left");
+	var left.x=35;
+	var left.y=35;
+	//获取横纵坐标
+	
+}
+</script>
+</html>

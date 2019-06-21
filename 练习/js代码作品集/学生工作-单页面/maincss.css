@@ -1,0 +1,25 @@
+html, body, div, p, ul, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, form, input, select, button, textarea, iframe, table, th, td {
+	margin: 0;
+	padding: 0;
+}
+/*字体*/
+body{font:14px/21px '微软雅黑';_font-family:'微软雅黑' !important; text-align:left;color:#333;}
+/*包裹 IE8居中*/
+#wrap{text-align:left;;}
+/*ul*/
+ul{ list-style:none;}
+/*a*/
+a{ text-decoration:none;outline:none;}
+/*img*/
+img{border:0 none;max-width:100%;}
+/*浮动*/
+.fl{float:left; display:inline;}
+.fr{float:right; display:inline;}
+/*清除浮动*/
+.clear{clear:both;}
+/*塌陷*/
+.clearfix{zoom:1;}
+.clearfix:before,.clearfix:after{display: table;line-height: 0;content:"";}
+.clearfix:after{clear:both;}
+.w1300{max-width:1160px;margin: auto;min-width:1040px;padding:0 20px;}
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#aaa{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: aqua;
+
+}
+#bbb{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color:blue;
+
+}
+#ccc{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color:blueviolet;
+
+}
+
+</style>
+<body>
+    <h>点击段落出现新的内容this语法
+    </h>
+    <p onclick="this.innerHTML=a">hello</p>
+    <p>鼠标指向移动</p>
+    <div id="aaa" onmousemove="myfunction()"></div>
+    <p>点击DIV移动</p>
+    <div id="bbb" onclick="key()"></div> 
+    <p>自动移动</p>
+    <div id="ccc" onshow="move()"></div>
+
+  
+</body>
+<script>
+var a ="你好";
+var b=document.getElementById("aaa");
+var c=document.getElementById("bbb");
+var d=document.getElementById("ccc");
+function myfunction(){
+    b.style.left=b.offsetLeft+20+"px";
+}
+function key(){
+c.style.left=c.offsetLeft+20+"px";
+
+}
+function move(){
+    c.style.left=c.offsetLeft+20+"px";
+}
+
+
+
+
+
+
+</script>
+</html>

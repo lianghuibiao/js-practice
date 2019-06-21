@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>井字棋</title>
+</head>
+	<style>
+		*{
+    margin: 0;}
+    #canvas{
+        background:#ffff;margin: 100px auto;display: block;border: 10px solid #09b32e;
+        border-radius: 4px;box-shadow: 0px 0px 6px #000;position: absolute;
+    }
+	</style>
+<body>
+<!--设定地图宽度和高度-->
+<canvas width="450" height="450" id="canvas">
+
+</canvas>
+	
+
+<!--人物设定-->
+
+</body>
+	<script type="text/javascript">
+    //拿到画板
+ var canvas=document.getElementById('canvas');
+
+//获取画板权限
+var ctx=canvas.getContext('2d');
+function drawRect(){
+   
+
+
+         
+            //开始画画
+            //起点
+            ctx.beginPath();//开始路径
+            ctx.moveTo(150,0);
+            //终点
+            ctx.lineTo(150,450);
+            //连接起来
+            ctx.moveTo(0,150);
+            //终点
+            ctx.lineTo(450,150);
+            //连接起来
+            ctx.closePath();//结束路径
+            ctx.stroke();
+            ctx.beginPath();//开始路径
+            ctx.moveTo(300,0);
+            //终点
+            ctx.lineTo(300,450);
+            //连接起来
+            ctx.moveTo(0,300);
+            //终点
+            ctx.lineTo(450,300);
+            //连接起来
+            ctx.closePath();//结束路径
+            ctx.stroke();
+   //设置点击区域
+}drawRect()
+arr = [
+ {x:0, y:0, width:150, height:150,content:''},
+  {x:0, y:150, width:150, height:150,content:''},
+  {x:0, y:300, width:150, height:150,content:''},
+  {x:150, y:0, width:150, height:150,content:''},
+  {x:150, y:150, width:150, height:150,content:''},
+  {x:150, y:300, width:150, height:150,content:''},
+  {x:300, y:0, width:150, height:150,content:''},
+  {x:300, y:150, width:150, height:150,content:''},
+  {x:300, y:300, width:150, height:150,content:''}
+];
+canvas = document.getElementById('canvas');
+ctx = canvas.getContext('2d');
+draw();
+
+//对事件进行监听
+canvas.addEventListener('click', function(e){
+  p = getEventPosition(e);
+  //判断点击了那个矩形
+  if(p.y <= arr[0].height){
+    console.log('你点击了第一个矩形',p)
+  }
+  if(p.y>arr[0].height && p.y <= (arr[1].height+arr[1].y)){
+    console.log('你点击了第二个矩形',p)
+  }
+  if(p.y>(arr[1].height+arr[1].y) && p.y <= (arr[2].height+arr[2].y)){
+    console.log('你点击了第三个矩形',p)
+  }
+  if(p.y <= arr[3].height){
+    console.log('你点击了第四个矩形',p)
+  }
+  if(p.y>arr[3].height && p.y <= (arr[4].height+arr[4].y)){
+    console.log('你点击了第五个矩形',p)
+  }
+  if(p.y>(arr[4].height+arr[4].y) && p.y <= (arr[5].height+arr[5].y)){
+    console.log('你点击了第六个矩形',p)
+  }
+  if(p.y <= arr[6].height){
+    console.log('你点击了第七个矩形',p)
+  }
+  if(p.y>arr[6].height && p.y <= (arr[7].height+arr[7].y)){
+    console.log('你点击了第八个矩形',p)
+  }
+  if(p.y>(arr[7].height+arr[7].y) && p.y <= (arr[8].height+arr[8].y)){
+    console.log('你点击了第九个矩形',p)
+  }
+}, );
+
+function getEventPosition(ev){
+  var x, y;
+  if (ev.layerX || ev.layerX == 0) {
+    x = ev.layerX;
+    y = ev.layerY;
+  }if (ev.offsetY || ev.offsetX == 150) { // Opera
+    x = ev.offsetX;
+    y = ev.offsetY;
+  }
+  return {x: x, y: y};
+}
+
+//画图像
+    function draw(p){
+  var who = [];
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  arr.forEach(function(v, i){
+    ctx.beginPath();
+    ctx.rect(v.x, v.y, v.width, v.height);
+    ctx.font="20px Georgia";
+    ctx.fillStyle=v.color;
+    ctx.fillText(v.content,0,v.y+20);
+    ctx.stroke();
+    if(p && ctx.isPointInPath(p.x, p.y)){
+      //如果传入了事件坐标，就用isPointInPath判断一下
+      //如果当前环境覆盖了该坐标，就将当前环境的index值放到数组里
+      who.push(i);
+    }
+  });
+  //根据数组中的index值，可以到arr数组中找到相应的元素。
+  return who;
+}
+
+
+
+
+
+   //封装点击区域内函数事件
+
+
+
+
+   //定义游戏规则
+
+   
+
+
+
+</script>
+</html>

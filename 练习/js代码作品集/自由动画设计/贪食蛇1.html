@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="Keywords"content="关键字，关键词">
+<meta name="Descripyion" content="描述信息">
+<title>贪食蛇1</title>
+</head>
+<!--样式-->
+<!--解决兼容性-->
+<style type="text/css">
+*{
+    margin: 0;}
+    #canvas{
+        background:#ffff;margin: 100px auto;display: block;border: 10px solid #09b32e;
+        border-radius: 4px;box-shadow: 0px 0px 6px #000;
+    }
+h1{
+    text-align: center;
+}
+
+
+
+    
+</style>
+
+<body>
+    <h1>3.贪食蛇</h1>
+   
+<canvas width="450" height="450" id="canvas"></canvas>
+
+
+</body>
+<script>
+//拿到画板
+ var canvas=document.getElementById('canvas');
+
+//获取画板权限
+var ctx=canvas.getContext('2d');
+var width=15;
+//初始化蛇的长度
+var snakeCount=6;
+//定义一条蛇
+
+var snake=[];
+var foodX=0;
+var foodY=0;
+var toGo=3;
+//定义一个方法
+
+
+function drawRect(){
+   for(var i=0;i<30;i++){
+
+
+          ctx.strokeStyle="#000000";
+            //开始画画
+            //起点
+            ctx.beginPath();//开始路径
+            ctx.moveTo(i*15,0);
+            //终点
+            ctx.lineTo(i*15,450);
+            //连接起来
+            ctx.moveTo(0,i*15);
+            //终点
+            ctx.lineTo(450,i*15);
+            //连接起来
+            ctx.closePath();//结束路径
+            ctx.stroke();
+   }
+   //画蛇
+   for(var i=0;i<snakeCount;i++){
+       ctx.fillStyle="#000";
+       //蛇头
+       if(i==snakeCount-1){
+        ctx.fillStyle="red";
+       }
+        ctx.fillRect(snake[i].x,snake[i].y,15,15)
+
+
+   }
+    //绘制食物  矩形
+    ctx.fillStyle="#66ff99";
+    ctx.fillRect(foodX,foodY,15,15);
+   ctx.fill();
+
+
+}
+//定义一个蛇的坐标
+function  start(){
+    for(var i=0;i<snakeCount;i++){
+        snake[i]={x:i*15,y:0}
+    }
+    addFood();
+    drawRect();
+}
+function addFood(){
+    //随机坐标  30乘15==450；
+    foodX=Math.floor(Math.random()*30)*15;
+    foodY=Math.floor(Math.random()*30)*15;
+    //如果食物出现在蛇身上就再生成一次随机食物
+    for(var i=0;i<snakeCount-1;i++){
+        if(foodX==snake[i].x&&foodY==snake[i].y){
+            addFood();
+            
+        }
+    }
+}
+//蛇的移动方向
+function move(){
+    switch(toGo){
+        case 1:snake.push({x:snake[snakeCount-1].x-15,y:snake[snakeCount-1].y});break;//向左跑
+        case 2:snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y-15});break;//向右跑
+        case 3:snake.push({x:snake[snakeCount-1].x+15,y:snake[snakeCount-1].y});break;//向上跑
+        case 4:snake.push({x:snake[snakeCount-1].x,y:snake[snakeCount-1].y+15});break;//向下跑
+        case 5:snake.push({x:snake[snakeCount-1].x+15,y:snake[snakeCount-1].y+15});break;//斜着跑
+
+    }
+      snake.shift();
+      //重新绘制
+      ctx.clearRect(0,0,450,450);
+      
+      isDead();
+      isEat();
+      drawRect(); 
+}
+
+
+
+function keyDown(e){
+    switch(e.keyCode){
+        case 37:toGo=1;break;
+        case 38:toGo=2;break;
+        case 39:toGo=3;break;
+        case 40:toGo=4;break;
+        case 81:toGo=5;break;
+    }
+}
+
+function btnstart(){
+    setInterval(move,150);
+    //监听键盘事件
+document.onkeydown=function(e){
+    var e=e||window.event;
+    keyDown(e);
+}
+
+}
+//定义游戏规则
+function isDead(){
+    //判断边界
+    if(snake[snakeCount-1].x>435||snake[snakeCount-1].y>435||snake[snakeCount-1].x<0||snake[snakeCount-1].y<0){
+        alert("你输了！！");
+        window.location.reload();
+    }
+    //判断自身 遍历自身
+    for(var i=0;i<snakeCount-1;i++){
+            if(snake[snakeCount-1].x==snake[i].x&&snake[snakeCount-1].y==snake[i].y){
+                alert("你居然吃自己！！");
+        window.location.reload();
+            }
+    }
+}
+//吃食物
+function isEat(){
+    if(snake[snakeCount-1].x==foodX&&snake[snakeCount-1].y==foodY){
+addFood();
+snakeCount++;
+snake.unshift({x:-15,y:-15});
+    }
+}
+  //当前页面加载完成执行这个方法
+window.onload=function(){
+    start();
+    btnstart();
+}
+
+
+
+</script>
+</html>

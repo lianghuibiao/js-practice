@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+//把五种数据类型运用得到运算符中
+var a=123;//number类型
+a=a+1;
+console.log(a);
+var b="123";//string 类型
+b=b+1;
+console.log(b);//输出1231  字符串加数字形成字符串1231 
+console.log(typeof b);//查看类型   string类型
+var c=true;
+c=false;//false==0; 强行从   boolea-->number类型转换
+c=c+1;//自增一个单位后变为number类型   true==1的 
+console.log(c);//输出2  number类型
+console.log(typeof c);//查看数据类型
+var d=undefined;
+d=d+1;//自增后转换为number类型
+console.log(d);//输出NAN    not a number的意思，电脑无法解释
+console.log(typeof d);//查看数据类型
+var e=null;
+//e=e+1;//强行转换
+console.log(e);//输出null  null本身就是一个字面量 
+console.log(typeof e);//输出object类型
+
+a=a+45;
+b=b+46;
+c=c+45;
+e=e+45;
+//前++
+a++;
+b++;
+c++;
+d++;
+e++;
+//后++
+++a;
+++b;
+++c;
+++d;
+++e;
+//无论是哪一种++都是让原变量自增1；；
+//不同的是   a++和++a  的值不同
+//a++ 的值是自增前的值 原值   ++a是自增后的值 变后的值
+console.log(a+"\n"+b+"\n"+c+"\n"+d+"\n"+e);
+//结果169
+/*
+123146
+46
+NaN
+45
+*/
+var q=10;
+q=q++;//var a=q++  a=q; q++等于原值
+//前--和后--  无论是a--还是--a都会立即使元变量值自减1；
+//q--是变量的原值
+//--q是变量的新值
+q--;
+--q;
+
+
+
+//isNaN(b)可以检查是不是
+
+//可以对变量进行自动转换
+//===是全等
+
+console.log(q);
+</script>
+</html>

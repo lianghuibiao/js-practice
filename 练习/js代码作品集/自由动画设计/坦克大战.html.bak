@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>坦克大战</title>
+</head>
+<style>
+.background{
+  width: 100px;
+	height: 100px;
+  background-color: antiquewhite;
+}
+	.box{
+		width: 500px;
+		height: 500px;
+		background-color:red;
+		border：0px;
+	}
+</style>
+<body class="background">
+	<div class="box"></div>
+</body>
+</html>

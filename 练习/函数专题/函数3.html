@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript">
+		function my(name,age,gender){
+			//首先得新建一个对象
+			var obj=new Object();
+			obj.name=name,
+			obj.age=age,
+			obj.gender=gender;
+			obj.sayName=function(){
+				alert(this.name);
+			};
+			return obj;
+		}
+		//调用
+		var a1=my("我",18,"男");
+		//console.log(a1);
+		//console.log(obj.name);
+		
+		//这是直接创建一个对象直接调用
+		var obj3={
+			name:"沙和尚",
+			age:38,
+			gender:"男",
+			sayName:function(){
+				alert(this.name);
+			}
+		};
+		console.log(obj3.name);
+		function creatPerson(name,age,gender){
+			var obj=new Object();
+			obj.name=name;
+			obj.age=age;
+			obj.gender=gender;
+			obj.sayName=function(){
+				alert(this.name);
+			};
+			
+			//将新的对象返回
+			return obj;
+		}
+		var obj2=creatPerson("猪八戒",18,"男");
+		console.log(obj2);
+	</script>
+</html>

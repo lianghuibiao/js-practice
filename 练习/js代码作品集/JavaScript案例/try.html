@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+#aa{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+   
+}
+#qq{
+    margin-top: 200px;
+}
+
+
+</style>
+<body>
+ <div id="aa"></div>  
+ <input type="text" id="text" onclick="text">
+ <button type="button" onclick="my()" id="qq">点击</button> 
+</body>
+<script>
+     var a=document.getElementById("aa");
+     var b=document.getElementById("text");
+     
+function my(){
+ w=floor((Math.random()*10)+1);
+   a.style.left=a.offsetLeft+w+"px";
+  //offsetLeft+floor((Math.random()*10)+1)
+ 
+}
+function you(){
+    b.innerText=0;
+}
+
+
+</script>
+</html>

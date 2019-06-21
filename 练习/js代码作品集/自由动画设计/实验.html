@@ -1,0 +1,107 @@
+
+<html>	
+<head>
+<meta charset="utf-8"> 
+<title>爱心</title> 
+<style> 
+
+#div2
+{
+	width:100px;
+	height:175px;
+	background-color:red;
+	transform:rotate(45deg);
+	-ms-transform:rotate(45deg); 
+	-webkit-transform:rotate(45deg); 
+	margin-left: 55px;
+	border-radius: 50px 50px 0px 0px;	 
+	
+}
+	#div1
+{
+	width:100px;
+	height:175px;
+	background-color:red;
+	transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	
+	
+	border-radius: 50px 50px 0px 0px;	 
+}
+	#div2
+{
+	
+	background:red;
+	position:relative;
+	animation:myfirst 5s;
+	-webkit-animation:myfirst 2s infinite linear ;
+	margin-top: -175px;
+
+}
+
+	#div1
+{
+	
+	background:red;
+	position:relative;
+	animation:myfirst 5s;
+	-webkit-animation:myfirst 2s infinite linear ;
+	
+	
+}
+	#posision{
+		width: 500px;
+		height:0px;
+		
+		float:left;
+	}
+	#picture{
+		float: left;
+		
+	}
+	@keyframes myfirst
+{
+	0%   {background:red; left:0px; }
+	25%  {background:red; left:1000px;}
+	50% {background:red; left:1000px;}
+	75%   {background:red; left:1000px; }
+	100%  {background:red; left:0px;}
+	
+}
+
+	
+	
+
+	.picture1{
+		float: right;
+		width: 50px;
+		height: 50px;
+	}
+
+
+</style>
+</head>
+<body>
+
+<img id="picture" src="爱心.jpg">
+
+<div id="posision">
+<div id="a">
+<div id="div1"></div>
+<div id="div2"></div>
+<hr/>
+</div>
+
+</div>
+
+<img id="picture1" src="左.png" style="width: 150px;height: 150px;float: right;">
+
+
+</body>
+	<script>
+	
+	
+	
+	</script>
+</html>
