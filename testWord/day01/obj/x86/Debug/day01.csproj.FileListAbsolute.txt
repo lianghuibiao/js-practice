@@ -1,0 +1,29 @@
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\day01.Form1.resources
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\day01.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\bin\Debug\day01.exe
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\bin\Debug\day01.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\day01.exe
+c:\users\administrator\documents\visual studio 2010\Projects\day01\day01\obj\x86\Debug\day01.pdb
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.exe
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.pdb
+C:\Users\shinelon\Desktop\day01\day01\bin\Debug\day01.exe
+C:\Users\shinelon\Desktop\day01\day01\bin\Debug\day01.pdb
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.Form1.resources
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.Form2.resources
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.Properties.Resources.resources
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.csproj.GenerateResource.Cache
+C:\Users\shinelon\Desktop\day01\day01\bin\Debug\day01.exe.config
+C:\Users\shinelon\Desktop\day01\day01\obj\x86\Debug\day01.csprojResolveAssemblyReference.cache
+C:\Users\shinelon\Desktop\testWord\day01\bin\Debug\day01.exe.config
+C:\Users\shinelon\Desktop\testWord\day01\bin\Debug\day01.exe
+C:\Users\shinelon\Desktop\testWord\day01\bin\Debug\day01.pdb
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.csprojResolveAssemblyReference.cache
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.Form1.resources
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.Form2.resources
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.Properties.Resources.resources
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.csproj.GenerateResource.Cache
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.exe
+C:\Users\shinelon\Desktop\testWord\day01\obj\x86\Debug\day01.pdb

@@ -1,0 +1,8 @@
+C:\Users\shinelon\Desktop\testWord\day02\bin\Debug\day02.exe
+C:\Users\shinelon\Desktop\testWord\day02\bin\Debug\day02.pdb
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.Form1.resources
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.Properties.Resources.resources
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.csproj.GenerateResource.Cache
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.exe
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.pdb
+C:\Users\shinelon\Desktop\testWord\day02\obj\x86\Debug\day02.Form2.resources
