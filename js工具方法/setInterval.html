@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#btn{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			left: 0;
+			top: 0;
+			position: absolute;			
+			
+			
+		}
+		
+		
+		
+		
+	</style>
+	<script>
+		window.onload=function(){
+	   var btn=document.getElementById("btn");
+			
+			var speed=10;
+			 //启动计时器
+
+		//doKeyDown(event);
+  
+  	
+ 		
+	
+	//moveright();	
+	document.onkeydown=function(event){
+var e = event || window.event || arguments.callee.caller.arguments[0];
+  switch(e.keyCode&&event.keyCode){
+  	case 37:
+  	//alert("aa");//左
+  	break;
+  	case 38:
+  	//alert("bb");//上
+  	break;
+  	case 39:
+  var timer= setInterval
+ 		(
+ 			function()
+ 			{
+ 					btn.style.left=btn.offsetLeft+speed+"px";
+ 			},20		
+ 		)
+ 	
+  	//alert("cc");//右
+  	break;
+  	case 40:
+  	//clearInterval(timer);
+  	//alert("dd");//下
+  	clearInterval(timer);//关闭计时器
+  	break;
+  	
+  	
+  	
+  }
+
+}; 
+	
+	
+	
+		}
+	</script>
+	<body>
+		<div id="btn"></div>
+	</body>
+</html>

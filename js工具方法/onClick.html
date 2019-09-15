@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#btn{
+  			
+  		 position: absolute;
+		}
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var btn=document.getElementById("btn");
+			//点击执行  执行直接启动代码  元素会进行移动   
+			window.onclick=function(event){
+				var x=event.clientX;
+				var y=event.clientY;
+				//btn.style.left=btn.offsetLeft+x+"px";
+				//btn.style.top=btn.offsetTop+y+"px";
+				//btn.offsetLeft=x;
+				//btn.offsetTop=y;
+				//alert("x坐标："+x+"y坐标："+y);
+				btn.style.left=x+"px";
+				btn.style.top=y+"px";
+				//alert(btn.style.left);
+				
+			}
+			
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		<button id="btn">鼠标被按下</button>
+	</body>
+</html>
