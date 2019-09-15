@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 检查正则中是否有.
+		 * 判断有.必须使用转义字符\
+		 * 检查正则中是否有\
+		 * 打印的时候要用两个\  这样才是一个\
+		 * 
+		 * */
+		
+		
+		//注意  如果要使用构造函数来表示.的正则
+		//要用\\.来表示    因为构造函数里面的参数是字符串 而\是一个转义字符  一个\不可以
+	var  reg=new RegExp("\\.")
+		//var reg=/\./;
+		//var reg=/\\/;
+		
+		
+		/*
+		 
+		 * \w  表示任意字符   字母数字[A-z0-9_]
+		 * \W  除了字母数字   [^A-z0-9_]
+		 * \D  除了数字[^0-9]
+		 * \d  任意数字[0-9]
+		 * \s  空格
+		 * \S  除了空格
+		 * \b  单词边界
+		 * \B  除了单词边界
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		//console.log(reg.test("1231.23"));
+		/*
+		 
+		 * 
+		 * 创建一个正则判断是否有child
+		 * 
+		 * 
+		 * */
+		var reg=/\bchild\b/; //要是这个单词
+		
+		//console.log(reg.test("hello childen"));
+		var str=prompt("请输入你的用户名：");
+		//\g是全局
+		//str=str.replace(/^\s*/,"");//去除开头的空格
+		str=str.replace(/\s*$/,"");//去除结束的空格 
+		str=str.replace(/^\s|\s$/g,"")  //去除前后的空格   要用全局\g  或|
+		console.log(str);
+	</script>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>象棋游戏</title>
+	
+		
+		<style>
+		#div{
+			width: 509px;
+			height: 588px;
+			background-image: url(img/x/棋盘.jpg);
+			padding: 25px;
+			float: left;
+		}	
+		#right{
+			width: 300px;
+			height: 628px;
+			float: right;
+		}
+		body{
+			width: 1000px;
+			height: 640px;
+		}
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+		//var can = document.getElementById("canvas");
+	 //  var msg = document.getElementById("msg");
+	   //var cxt = can.getContext("2d");
+		//<link rel="stylesheet" type="text/css" href="css/chess.css">
+		//<div><img src="img/x/BA.BMP" width="50"></div>
+	    var div=document.getElementById("div");
+	    
+	    
+	    //创建IMG子元素
+	
+	   var ImgArry=[
+	   "img/x/BA.BMP",
+	   "img/x/BA.BMP",
+	   "img/x/BB.BMP" ,
+	   "img/x/BB.BMP" ,
+	   "img/x/BC.BMP",
+	    "img/x/BC.BMP",
+		"img/x/BK.BMP",
+	   "img/x/BN.BMP",
+	    "img/x/BN.BMP",
+	     "img/x/BP.BMP",
+	     "img/x/BP.BMP",
+	     "img/x/BP.BMP",
+	     "img/x/BP.BMP",
+		"img/x/BR.BMP",
+		"img/x/BR.BMP"
+	   ];
+	   var hong=[
+	   "img/x/RA.BMP",
+		"img/x/RB.BMP",
+		"img/x/RC.BMP",
+		"img/x/RK.BMP",
+		"img/x/RN.BMP",
+		"img/x/RP.BMP",
+		"img/x/RR.BMP"
+	   ];
+		//用函数搭建棋子的位置
+		var x=25;
+		var y=25;
+		
+		
+		//img.src=hei[1];
+		
+		//alert(aa+"a"+bb);
+		//生成了img  首先要画出棋盘格子
+	   //var arr=
+		for (var i=0;i<ImgArry.length;i++) {
+		
+			var img=document.createElement("img");
+		      img.src=ImgArry[i];
+		    //  img.style.marginLeft="5px";
+		    div.appendChild(img);
+		    ImgArry.num=i
+		    //  img.style.marginLeft="5px";
+		      img.onclick=function(){
+		      if(ImgArry.num==1){
+		      	alert("第二章");
+		      }
+		      
+		    	
+		    };
+		  
+		    
+		    
+		};
+		
+		
+
+		//var aa=img.offsetLeft;//33
+		//var bb=img.offsetTop; //48
+		 //认父子
+			//9*10的格子
+		//	img.src=hei[i];//加载了七个图片
+		//	img.setAttribute('src',hei[i]);
+		
+		
+		
+	
+		//hei.style.left=200+"px";
+		//shi.style.top="100px";
+		//写死初始值
+		//ju.style.left=0;
+		//ju.style.top=0;
+		//ju.offsetLeft=0+"px";
+		//ju.offsetTop=0+"px";
+		
+		/*
+		 
+		 * 
+		 * <div id="left">
+			<div id="shi"><img src="img/x/BA.BMP" width="50"></div>
+			<div id="xiang"><img src="img/x/BB.BMP" width="50"></div>
+			<div id="pao"><img src="img/x/BC.BMP" width="50"></div>
+			<div id="jiangjun"><img src="img/x/BK.BMP" width="50"></div>
+			<div id="ma"><img src="img/x/BN.BMP" width="50"></div>
+			<div id="zu"><img src="img/x/BP.BMP" width="50"></div>
+			<div id="ju"><img src="img/x/BR.BMP" width="50"></div>
+			<div id="hong-shi"><img src="img/x/RA.BMP" width="50"></div>
+			<div id="hong-xiang"><img src="img/x/RB.BMP" width="50"></div>
+			<div id="hong-pao"><img src="img/x/RC.BMP" width="50"></div>
+			<div id="hong-jiangjun"><img src="img/x/RK.BMP" width="50"></div>
+			<div id="hong-ma"><img src="img/x/RN.BMP"   width="50"></div>
+			<div id="hong-bing"><img src="img/x/RP.BMP" width="50"></div>
+			<div id="hong-ju"><img src="img/x/RR.BMP" width="50"></div>
+				//加载棋子
+		var kaishi=document.getElementById('kaishi');
+		//kaishi.innerHTML="aaa";  拿到了
+		//加载各个方位的棋子
+		//黑方棋子
+		var shi=document.getElementById('shi');
+		var xiang=document.getElementById('xiang');
+		var pao=document.getElementById('pao');
+		var zu=document.getElementById('zu');
+		var jiangjun=document.getElementById('jiangjun');
+		var ma=document.getElementById('ma');
+		var ju=document.getElementById('ju');
+		//红方棋子
+		var hongshi=document.getElementById('hong-shi');
+		var hongxiang=document.getElementById('hong-xiang');
+		var hongpao=document.getElementById('hong-pao');
+		var hongjiangjun=document.getElementById('hong-jiangjun');
+		var hongbing=document.getElementById('hong-bing');
+		var hongma=document.getElementById('hong-ma');
+		var hongju=document.getElementById('hong-ju');
+		</div>
+		 * 
+		 * 
+		 * */
+		
+		
+		
+		
+		}
+		/*<div id="right">
+			<h1>玩家</h1>
+			<h3>分数</h3>
+			<input type="text" />
+			<br />
+			<button type="button">悔棋</button>
+			<button id="kaishi">开始游戏</button>
+			
+			
+			
+		</div>*/
+	</script>
+	</head>
+	
+	
+	<body>
+		<div id="div" width="560" height="560">
+			
+			
+			
+		</div>
+		
+		
+		
+	</body>
+	
+	
+	
+	
+	
+	
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#box1{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			position: absolute;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+			/*
+			 
+			 * 首先我们要获取到这个盒子
+			 * 设置绝对定位 
+			 * 
+			 *
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			var box1=document.getElementById("box1");
+			//要在内部实现这个实例
+			//var box1=document.getElementById("box1");
+			document.onkeydown=function(event){
+				
+				//解决兼容问题
+				event=event||window.event;
+				/*
+				 
+				 *左：37
+				 * 上：38
+				 * 右：39
+				 * 下：40
+				 * 
+				 * 
+				 *
+				 * 
+				 * */
+				var speed=10;
+				if(event.ctrlKey){
+					speed=200;
+				}
+				switch(event.keyCode){
+					case 37:
+					//alert("左");
+					box1.style.left=box1.offsetLeft-speed+"px";
+					break;
+					case 38:
+					//alert("上");
+					box1.style.top=box1.offsetTop-speed+"px";
+					break;
+					case 39:
+					box1.style.left=box1.offsetLeft+speed+"px";
+					//alert("右");
+					break;
+					case 40:
+					box1.style.top=box1.offsetTop+speed+"px";
+					//alert("下");
+					break;
+			
+					
+				}
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+			
+		};
+		
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		<div id="box1"></div>
+	</body>
+</html>

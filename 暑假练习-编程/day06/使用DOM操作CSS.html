@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		/*
+		 
+		 * 修改对象元素的内联样式   对style进行修改
+		 * 
+		 * getComputedStyle()获取内联样式’
+		 *  两个参数
+		 * 第一个 需要获取样式的元素 】
+		 * 第二个  传null
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		
+		window.onload=function(){
+			//获取button
+			var btn=document.getElementById("btn");
+			//获取元素
+			var div=document.getElementById("div");
+			//对样式进行修改
+			//语法 元素.style.样式名=属性值
+			btn.onclick=function(){
+				//操作获取到的div的宽度  
+				div.style.width="200px";
+				//操作获取带的div的高度
+				div.style.height="200px";
+				//操作获取到的div的背景颜色‘
+				//注意在js中不用-  这样意味着减会报错
+				div.style.backgroundColor="yellow";
+				//修改获取到的元素的边框
+				div.style.borderWidth="20px";
+				//border="宽度 样式 颜色"
+				div.style.border="thick solid #0000FF";
+
+
+			};
+		
+			
+			
+			
+		};
+		
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		
+	<div id="div">
+		
+		
+		
+	</div>
+	<button id="btn">你点击一下</button>
+	</body>
+
+</html>

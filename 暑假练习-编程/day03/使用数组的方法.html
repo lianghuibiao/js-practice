@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//sort方法  可以对数组进行排序  根据编码表
+		var arr=[5,6,8,7,3,11,15]
+		//arr.sort();//直接进行排序是错误的  有时候
+		//如果return 大于0的话  就要进行交换   
+		//如果return 小于0或等于0 就不交换
+		arr.sort(function(a,b){
+			/*if(a>b){
+				return 1;  
+				
+			}else if(a<b){
+				return 1;
+				
+			}else{
+				return 0;
+			}*/
+			//如果需要升序 直接a-b就行
+			//如果需要降序就要直接b-a
+			//return b-a;//降序
+			return a-b;//升序
+			
+		})
+		console.log(arr);
+		
+		
+	</script>
+</html>

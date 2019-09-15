@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		/*
+		 
+		 * 绑定单击响应函数
+		 * addEventListener()
+		 * -通过这个方法可以为元素绑定响应函数
+		 * 参数
+		 *    事件的字符串不要ON
+		 *     回调函数  当事件被触发时该函数会回调
+		 *   是否在捕获阶段触发事件，需要一个布尔值  一般都传false
+		 * 这种方法不支持IE8和以下浏览器
+		 * 
+		 * 
+		 * attachEvent()和这个差不多  支持IE5-IE10的浏览器
+		 *   事件字符串   要on
+		 *   回调函数
+		 * 处理兼容问题
+		 *  
+		 * 
+		 * 兼容所有的浏览器
+		 * 
+		 * 
+		 * 
+		 * */
+		window.onload=function(){
+	/*	
+	 * 
+	 * var btn=document.getElementById("btn");
+		btn.addEventListener("click",function(){
+		    alert(1);
+		},false);
+		btn.addEventListener("click",function(){
+		    alert(2);
+		},false);
+		btn.addEventListener("click",function(){
+		    alert(3);
+		},false);
+		
+		* */
+		//绑定一个函数
+		//先绑定先执行
+		/*btn.attachEvent("onclick",function(){
+			alert(1);
+		});*/
+		
+		
+		
+		
+		//创建一个函数用来绑定指定元素绑定函数
+		//obj 函数对象
+		//eventStr事件的字符串
+		//callback  回调函数
+		
+		
+		function bind(obj,eventStr,callback){
+			
+			
+			
+		
+			 
+//			 要兼容全部就要判断
+			if(obj.addEventListener){
+				//大部分浏览器都兼容
+			obj.addEventListener(eventStr,callback,false);
+			
+			}else{
+					//兼容IE8
+			//obj.attachEvent("on"+eventStr,callback);   浏览器自己调的函数
+			
+			obj.attachEvent("on"+eventStr,function(){
+				callback().call(boj); //自己调的函数
+			});
+			 
+			}
+			
+			
+		}
+		//要在外面调
+		
+		bind(btn,"click",function(){
+				alert(1);
+			})
+		};
+	</script>
+	<body>
+		<div id="div"></div>
+		<button id="btn">点击一下</button>
+	</body>
+	
+</html>

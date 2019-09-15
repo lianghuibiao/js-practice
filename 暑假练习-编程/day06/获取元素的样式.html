@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			
+			
+			
+			
+		</style>
+		<script type="text/javascript">
+			/*
+			 
+			 * 获取元素的样式
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			window.onload=function(){
+			var btn=document.getElementById("btn");
+			var div=document.getElementById("div");
+			btn.onclick=function(){
+				
+				//正常浏览器
+				//alert(getComputedStyle(div,null).width);
+				
+				//IE8浏览器的兼容格式
+				//alert(div.currentStyle.width);
+				//为什么我的ie浏览器都可以执行这个代码？
+				//理论上来说只有IE8才可以执行
+				
+			if(window.getComputedStyle){
+				return getComputedStyle(div,null).width;
+			}else{
+				return div.currentStyle.width;
+			}
+			
+				
+			   
+			};
+			
+			
+			
+			
+			
+			
+			function getStyle(obj,name){
+				//正常浏览器方式
+				return getComputedStyle(obj,null)[name];
+				
+				//ie8浏览器方式
+				return obj.currentStyle()
+				//这两个样式都是只读的没办法修改
+			};
+			
+			};
+			
+		</script>
+	</head>
+	<body>
+		<button id="btn">点击读取样式</button>
+		<div id="div"></div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+		
+		
+	</style>
+	<body>
+		<div id="div"></div>
+	</body>
+	<script type="text/javascript">
+		var div=document.getElementById("div");
+		document.onclick=function(event){
+			//alert(event);
+			//获取鼠标的水平坐标
+			event=event||window.event;
+			
+			var x=event.clientX; 
+			//获取鼠标的垂直坐标
+			var y=event.clientY;
+			//alert("鼠标的水平坐标是+"+x+"鼠标的垂直坐标是："+y);
+			//获取div的位置并绑定为鼠标
+			//。。。。。棋盘假想
+			
+			div.style.left=x-50+"px";
+			div.style.top=y-50+"px";
+		}
+		//鼠标点击一个位置div跟着移动
+	   
+		
+		
+		
+		
+		
+	</script>
+</html>

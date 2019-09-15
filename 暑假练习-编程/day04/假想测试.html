@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*
+		 
+		 * 创建一个新的元素 
+		 * 加载图片
+		 * 所谓的图片就是一个img标签加属性
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		//我们说创建了一个img元素
+		window.onload=function(){
+		var div=document.getElementById("div");
+		var img=document.createElement("img");
+		
+		div.appendChild(img);
+		  var hei=[
+	   "img/x/BA.BMP",
+	   "img/x/BB.BMP" ,
+	   "img/x/BC.BMP",
+		"img/x/BK.BMP",
+	   "img/x/BN.BMP",
+	     "img/x/BP.BMP",
+		"img/x/BR.BMP"
+	   ];
+	   var hong=[
+	   "img/x/RA.BMP",
+		"img/x/RB.BMP",
+		"img/x/RC.BMP",
+		"img/x/RK.BMP",
+		"img/x/RN.BMP",
+		"img/x/RP.BMP",
+		"img/x/RR.BMP"
+	   ];
+	   //切换图片
+	   var index=0;
+	    	clearInterval(pic);//在开始定时器之前开启一个定时器  防止过快
+	  var pic= setInterval(function(){
+	   	index++;
+	   		
+	   	img.src=hei[index];
+	   	//用摸的方法也是可以达到切换的效果的
+	   	index=index%hei.length;
+	   /*	if(index==5){
+	   		index=1;
+	   	//	clearInterval();
+	   	}
+	   */
+	  
+	   	
+	   },1000)
+	  /* 
+	   for(var i=0;i<hei.length;i++){
+	   	var img=document.createElement("img");
+		
+		div.appendChild(img);
+	   	
+	   	
+	   	
+	   	img.src=hei[i];
+	   	
+	   //	img.style.marginLeft="50px";
+	   	
+	   }
+		*/
+		
+		
+		}
+		
+		
+	</script>
+	<body>
+		<div id="div">
+			
+			
+		</div>
+	</body>
+</html>

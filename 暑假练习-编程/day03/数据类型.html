@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>数据类型</title>
+	</head>
+	<script type="text/javascript">
+		/*
+		 
+		 * 首先说数据类型
+		 * var  char  string boolean number 
+		 * 字符串  布尔类型  数字  数组类型  对象类型
+		 * 基本分这三类 
+		 * char 类型可参考字码表
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		var Number=123;//数字
+		var String="string";//字符串类型
+		var bool=true;//布尔类型
+		var a=132e-4; //小数  小数点向前移动
+		var a=123e4;//补零
+		//console.log(a);
+		var q=new Array("avadw","aaw","qwe");
+		//数组对象的创建  以及使用
+		//console.log(q[1]);
+		var obj={
+			name:"孙悟空",
+			gender:"男",
+			my:function(){
+				console.log("aaaa");
+			}
+		}
+		console.log(obj.my());   
+		//console.log(obj.my);   
+		//这个时候不能不加括号  因为如果不加括号会把函数打印出来
+		//c创建以及使用
+	    console.log(obj["name"]);   
+	</script>
+	<body>
+	</body>
+</html>

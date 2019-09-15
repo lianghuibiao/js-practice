@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>冒泡</title>
+	</head>
+	<style>
+		#div01{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+		}
+		span{
+			background-color: green;
+		}
+		
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		/*
+		 
+		 * 所谓的事件冒泡就是指事件的向上传导，当后代元素的上的事件被触发时，其祖先
+		 * 元素的相同事件也会被触发
+		 * 事件的冒泡-Bubble
+		 * 在开发中冒泡都是非常有用的
+		 * 
+		 * 
+		 * 
+		 * */
+		
+		
+		
+		
+		window.onload=function(){
+			var sp=document.getElementById("s1");
+			var div=document.getElementById("div01");
+			var bo=document.body;
+			sp.onclick=function(event){
+				alert("我是span响应函数");
+				//取消冒泡
+				event.cancelBubble=true;
+				
+				
+			};
+			div.onclick=function(){
+				alert("我是div01响应函数");
+			};
+			bo.onclick=function(){
+				alert("aaaa");
+			};
+			
+			
+			
+			
+		};
+		
+		
+		
+		
+	</script>
+	<body>
+		<div id="div01">
+			我是div01
+			<span id="s1">我是span</span>
+		</div>
+	</body>
+</html>

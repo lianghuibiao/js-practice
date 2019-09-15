@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>拖拽</title>
+		<style>
+			#box1{
+				width: 150px;
+				height: 150px;
+				background-color: yellow;
+     			position: absolute;
+			}
+			
+			
+			
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				/*
+				 
+				 * 拖拽box1
+				 * 1.当鼠标按下时开始拖拽
+				 * 2.元素随着鼠标移动
+				 * 3.当鼠标松开时  元素固定在当前位置
+				 * onmousedown
+				 * 当鼠标按下时  开始拖拽
+				 * onmouseup
+				 * 当鼠标松开时
+				 * 
+				 * 
+				 * 
+				 * 
+				 * */
+				//获取到box1
+				var box1=document.getElementById("box1");
+				/*
+				 
+				 * 提取一个专门用来拖拽的元素
+				 * 参数 开启拖拽的元素
+				 * 
+				 * 
+				 * 
+				 * */
+				
+				function drop(obj){
+				 obj.onmousedown=function(){
+				 
+				 		var ol=event.clientX-obj.offsetLeft;
+				 		var ot=event.clientY-obj.offsetTop;
+				 		
+				 	
+				 	
+				 	document.onmousemove=function(event){
+				 		event=event||window.event;
+				 		/*
+				 		 
+				 		 * 随意拖动
+				 		 * 
+				 		 * 
+				 		 * 
+				 		 * 
+				 		 * */
+				 	
+				 		
+				 		var left=event.clientX-ol;
+				 		var top=event.clientY-ot;
+				 		obj.style.left=left+"px";
+				 		obj.style.top=top+"px";
+				 		
+				 		
+				 		
+				 	};
+//				 	鼠标松开事件
+    				document.onmouseup=function(){
+    					document.onmousemove=null;
+    					//需要取消这个onmouseup事件
+    					document.onmouseup=null; 
+    					
+    				};
+    				return false;
+				 	
+				 	//setCapture() 捕获
+				 	
+				 	obj.releaseCapture&&obj.releaseCapture();
+				 };
+				 
+				};
+				drop(box1);
+			};
+			
+			/*
+			 
+			 * 拖拽网页内容时
+			 * 
+			 * 拖拽网页内容时  会导致拖拽功能异常
+			 * 这个是浏览器提供的默认行为
+			 * 如果不希望拖拽报错需要加上return false
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			
+		</script>
+	</head>
+	<body>
+		
+		<div id="box1"></div>
+	</body>
+	
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 我们说基本数据类型有 number string boolean undefined unll
+		 * 这些基本数据类型不够强大
+		 * 因此 JS为我们的基本类型提供了三个包装类  
+		 * --第一个 Number() 
+		 * -可以将基本类型的数字转换为Number对象
+		 * 
+		 * --第二个String()
+		 * --可以将基本类型的字符串转换为String对象
+		 * 
+		 * 
+		 * --第三个Boolean()
+		 * --可以将基本类型的布尔值转换为Boolean对象
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		var a=123;
+		
+		//console.log(typeof a);  number类型
+		var num=new Number(a);
+		//console.log(num);
+		//console.log(typeof num);//这样就让这个类型转换成了对象
+		
+		var b="aaaa";
+		var str=new String(b);
+		//console.log(str);
+		//console.log(typeof str); //将字符串转换为了对象
+		
+		var c=true;
+		var boo=new Boolean(c);
+		//console.log(boo);
+		//console.log(typeof boo);//将布尔值转换为了对象
+		//上边的方法一般不会使用  
+		
+		//浏览器可以临时调用包装类转换成对象再使用方法
+		var a=123;
+		a=a.toString();  
+		//实质上这是不能转的  它就是通过了浏览器调用的临时包装类
+		console.log(a);
+		console.log(typeof a);
+		
+		
+	</script>
+</html>

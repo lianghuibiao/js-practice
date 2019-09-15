@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#div1{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var a=getStyle(div1,"backgroundColor");
+			alert(a);
+			
+			
+		};
+		
+		//封装工具以后使用
+		
+		
+		
+		
+		
+		
+		
+		//可以获取当前元素显示的样式
+		function getStyle(obj,name){
+			if(window.getComputedStyle)
+			{
+				return getComputedStyle(obj,null)[name];
+				
+				
+			}else{
+				return obj.currentStyle[name];
+			}
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		<div id="div1"></div>
+	</body>
+</html>

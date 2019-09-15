@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		window.onload=function(){
+			//获取到元素
+			//获取到按钮
+			var btn=document.getElementById("btn");
+			
+			//获取ul
+			var u1=document.getElementById("u1");
+			//获取li
+			//获取到a
+			var Alla=document.getElementsByTagName("a");
+			btn.onclick=function(){
+				var li=document.createElement("li");
+				li.innerHTML="<a href='javascript:;'>超链接1</a>";
+				u1.appendChild(li);
+			};
+			
+		};
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		<button id="btn">添加新的超链接</button>
+		<ul id="u1">
+			<li><a href='javascript:;'>超链接1</a></li>
+			<li><a href='javascript:;'>超链接2</a></li>
+			<li><a href='javascript:;'>超链接3</a></li>
+			
+			
+			
+		</ul>
+	</body>
+</html>

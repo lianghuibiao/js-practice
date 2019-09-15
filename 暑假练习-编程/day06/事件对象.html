@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#show{
+			width: 500px;
+			height: 500px;
+			border: 1px solid red;
+		}
+		#showMsg{
+			width: 200px;
+			height: 50px;
+			border: 1px solid yellow;
+			}
+		
+		
+		
+		
+	</style>
+	
+	<script>
+		window.onload=function(){
+			/**
+			 * 鼠标在一个showMsg中移动  显示鼠标坐标
+			 * 
+			 * 事件对象
+			 * --当事件的响应函数被触发时，浏览器每次都将一个事件对象作为一个实参传递进响应函数
+			 * 在事件对象中封装了当前的事件信息   鼠标坐标  按键位置  滚轮方向
+			 * 
+			 * 使用语法 
+			 * onmousemove
+			 * 
+			 * 该事件会在鼠标移动时被触发
+			 * 
+			 * 
+			 * 
+			 * 
+			 * */
+			//获取我们show对象的ID   绑定ID
+		var show=document.getElementById("show");
+		//绑定另一个showMsg
+		var showMsg=document.getElementById("showMsg");
+			show.onmousemove=function(event){
+				//alert("你好");//只会在showMsg里面进行这个响应了  
+				
+				//也可以
+				//最常见的方法
+				
+			//	event=event||window.event;
+			//	var x=event.clientX
+			//	var y=event.clientY
+				
+				
+				
+				//IE8没办法获取到这个
+				//在IE8中  响应函数被触发时  浏览器不会传递事件对象
+				var x=window.event.clientX||event.clientX;
+				var y=window.event.clientY||event.clientY;
+				//或者使用判断
+				
+				//这样就可以兼容ie8
+				if(!event){
+					event=window.event;
+				}
+				
+				
+				
+				showMsg.innerHTML="x坐标："+x+"y坐标："+y;  //显示坐标    IE8报错
+				//alert("x坐标："+x+"y坐标："+y);//直接就可以打印出XY
+				
+			};
+			
+			
+			
+			
+		};
+		
+		
+		
+		
+	</script>
+	<body>
+		<div id="show"></div>
+		<div id="showMsg"></div>
+	</body>
+</html>

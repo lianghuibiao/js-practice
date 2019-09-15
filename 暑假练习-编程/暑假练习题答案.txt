@@ -1,0 +1,358 @@
+使用JS输出“你好”。
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>使用JS输出“你好”</title>
+</head>
+<body>
+<script type="text/javascript">document.write("你好");</script>
+</body>
+</html>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+2.使用for循环获取表单元素中文
+
+<script type="text/javascript">
+function deal(form){
+    for(i=0; i < form.length; i++){
+        if(form.elements[i].value == ''){
+            alert(form.elements[i].title + "不能为空");
+        }
+    }
+}
+</script>
+
+<form name="form1">
+<tr>
+    <td>销售编号：</td>
+    <td><input type="text" name="num" title="销售编号"></td>
+</tr>
+<input type="button" onClick="deal(this.form);" id="change" value="提交">
+<input type="reset"  value="重置"/>
+</form>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+3.将数字格式化指定长度（用0填充）
+
+<script type="text/javascript">
+function deal(){
+    var num = form1.numberBer.value;
+    var len = form1.numberLen.value;
+    if (num == ""){
+        alert("请输入要格式化的数字");
+        form1.numberBer.focus();
+    }
+
+    if (isNaN(num)){
+        alert("格式化的数字不正确");
+        form1.numberBer.focus();
+    }
+    var temp = num.length;
+    for(var i = 0;i<len - temp;i++){
+        num = "0" + num;
+    }
+    form1.numberAft.value = num;
+
+}
+</script>
+
+<form name="form1">
+请输入要格式化的数字：<br/>
+<input type="text" name="numberBer"><br/>
+请输入要格式化的长度：<br/>
+<input type="text" name="numberLen"><br/>
+格式化后的数字：<br/>
+<input type="text" name="numberAft"><br/>
+<input type="button" onClick="deal();" id="change" value="转化">
+<input type="reset"  value="重置"/>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+4.将长数字分位显示（用，隔开）。
+
+<script type="text/javascript">
+function deal(){
+    var num = form1.numberBer.value;
+    var res = "";// 小数部分
+    var dec = "";// 整数部分
+    // check 省略
+    // 判断是否包含小数
+    var pos = num.indexOf(".", 1);
+    if (pos > 0) {
+        res = num.substr(pos);
+        dec = num.substr(0, pos);
+    }else{
+        dec = num;
+    }
+    var temp="";
+
+    for(var i = dec.length; i > 0; i-=3){
+        if(i-3 > 0){
+            temp = "," + dec.substr(i-3, 3) + temp;
+        }else{
+            temp = dec.substr(0, i) + temp;
+        }
+    }
+    form1.numberAft.value = temp + res;
+}
+</script>
+<form name="form1">
+请输入要格式化的数字：<br/>
+<input type="text" name="numberBer"><br/>
+格式化后的数字：<br/>
+<input type="text" name="numberAft"><br/>
+<input type="button" onClick="deal();" id="change" value="转化">
+<input type="reset"  value="重置"/>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+5.通过自定义函数显示系统时间。
+
+<script type="text/javascript">
+function clockon(bgclock){
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var day = now.getDay();
+    var hh = now.getHours();
+    var mm = now.getMinutes();
+    var sec = now.getSeconds();
+    var arrWeek=new Array("日", "一", "二", "三", "四", "五", "六");
+    var week = arrWeek[day];
+    bgclock.innerHTML = year + "年" + month + "月"  + date + "日" + "星期" + week + " " + hh + "时" + mm + "分"+ sec + "秒";
+    setTimeout("clockon(bgclock)",200);
+
+}
+</script>
+</head>
+<body onLoad="clockon(bgclock)">
+    <div id="bgclock"></div>
+</body>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+6.生成指定位数的验证码。
+
+function clockon(){
+    var result="";
+    for(i = 0; i < parseInt(4); i++){
+        // Math.random()小数
+        // parseInt转化整数
+        result = result + parseInt(Math.random()*10);
+    }
+    return result;
+}
+1
+2
+3
+4
+5
+6
+7
+8
+9
+7.动态设置网页的标题栏。 
+提示：使用title属性。
+
+<script type="text/javascript">
+var n =0;
+function title(){
+    n++;
+    if(n==3) n=1;
+    if(n==2){
+        document.title="test";
+    }
+    if(n==1){
+        document.title="个人";
+    }
+    setTimeout("title()", 1000);
+}
+title();
+</script>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+8.打开新窗口并输出内容。
+
+<script type="text/javascript">
+function op(){
+    var dow = window.open();
+    dow.document.open();
+    dow.document.write("<html><head><title>NEW</title></head></html>");
+    dow.document.write("<body>新画面</body>");
+    dow.document.write("</html>");
+}
+</script>
+
+<body>
+    <input type="button" value="打开" onclick="op();">
+</body>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+9.屏蔽右键，键盘事件。
+
+<script type="text/javascript">
+function keyDown(){
+    if(event.keyCode==8){
+        event.keyCode=0;
+        event.returnValue=false;
+        alert("禁止使用退格键");
+    }
+}
+function click(){
+    event.returnValue=false;
+    alert("禁止右击");
+}
+document.οncοntextmenu=click;
+</script>
+
+<body onkeydown="keyDown();"></body>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+10.让密码域更安全，禁止复制，剪切。右键之后复制，剪切为灰色。
+
+<input type="password" οncοpy="return false" oncut="return false"/>
+1
+11.防止表单重复提交。
+
+<input type="button" value="确定" οnclick="this.disabled=true; this.form.submit();"/>
+、

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>轮播</title>
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+		
+		
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		//照片框轮播动画
+		window.onload=function(){
+			//开启一个计时器
+			var div=document.getElementById("div");
+			var btn=document.getElementById("btn");
+			//获取元素的样式的方法  兼容浏览器
+			function getStyle(obj,name){
+			if(window.getComputedStyle)
+			{
+				return getComputedStyle(obj,null)[name];
+				
+				
+			}else{
+				return obj.currentStyle[name];
+			}
+		
+		  }
+			
+			btn.onclick=function(){
+				
+				//创建计时动画
+			var timer=setInterval(function(){
+				//var move=div.offsetLeft;
+				//alert(move);
+				//move=move+10+"px";
+				//只获取值
+				var wi=parseInt(getStyle(div,"width"));
+				var hi=parseInt(getStyle(div,"height"));
+				div.style.width=wi+10+"px";
+				if(wi>300){
+					div.style.height=hi+10+"px";
+					
+				}else if(hi>=300){
+					hi=300;
+					clearInterval(timer);
+				}
+				
+				
+				//alert(le);
+				
+			},30);
+				
+				
+				
+				//alert(getStyle(div,"left"));
+				
+				
+				
+				
+			};
+			
+			
+	    function move(){
+			
+			
+			
+			
+		}
+			
+			
+			
+		};
+		
+		
+		
+		
+		
+	</script>
+	<body>
+		<button id="btn">点击按钮</button>
+		<div id="div"></div>
+		
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		
+		window.onload=function(){
+		   var hb=document.getElementById("hb");
+		  
+			var num=1;
+			//用一个东西来保存    为了关闭
+			var timer=setInterval(function(){
+				//两个参数
+				/*
+				 计时效果  定时器  
+				 * 第一个参数
+				 * 表示函数运行
+				 * 
+				 * 
+				 * 
+				 * 第二个参数
+				 * 速度 毫秒为单位
+				 * 
+				 * 
+				 * 
+				 * 
+				 * */
+				hb.innerHTML=num++;
+				if(num==5){
+					//关闭计时器
+			        //清除计时
+			 clearInterval(timer);//在开始定时器之前开启一个定时器  防止过快
+			 //回到04假象测试 中  可以切换图片
+			 //clearTimeout()关闭延时调用
+				}
+				//parseInt()  可以取出合法数字
+				
+				//封装一个函数  让这些调就能实现
+				
+			},1000);
+			
+		};
+	   
+	
+	  
+		
+		
+		
+	</script>
+	<body>
+		<h1 id="hb"></h1>
+	</body>
+</html>

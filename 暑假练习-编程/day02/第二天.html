@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form name="form1">
+<tr>
+    <td>销售编号：</td>
+    <td><input type="text" name="num" title="销售编号"></td>
+</tr>
+<input type="button" onClick="deal(this.form);" id="change" value="提交">
+<input type="reset"  value="重置"/>
+</form>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 需求一 ：1.使用JS输出“你好”。
+		 * 需求二：2.使用for循环获取表单元素中文
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		
+	//console.log("你好");
+	//document.write("你好");
+	//alert("你好");
+		function deal(form){
+    for(i=0; i < form.length; i++){
+        if(form.elements[i].value == ''){
+            alert(form.elements[i].title + "不能为空");
+        }
+    }
+}
+		
+		
+		
+		
+	</script>
+</html>

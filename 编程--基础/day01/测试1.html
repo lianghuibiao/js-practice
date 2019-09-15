@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+		#div{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+		}
+		
+		
+		
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){  //加载
+		var div=document.getElementById("div");//获取父元素拿到id
+			var btn=document.getElementById("btn");
+		//var dd=document.createElement("div"); //创建页内元素
+		//认定父子关系
+			//div.appendChild(dd);
+			//赋予属性
+		/*div.style.backgroundColor="red";
+		div.style.width="100px";
+		div.style.height="100px";*/
+		
+		
+		//要先停掉这个函数的执行
+		//changebackColor(div,"red");
+		
+		//封装一个可以改变颜色的函数
+		//这个函数可以随意改变背景颜色
+		
+		function changebackColor(obj,color){
+			//var obj=document.getElementById()
+			obj.style.backgroundColor=color;
+		};
+		//封装动画函数
+	btn.onclick=function(){
+			//setInterval(function(){
+				//div.style.width="300px";
+				//div.style.height="300px";
+				
+				
+				//单击函数响应方法
+				move(div,"300px");
+				
+				
+			//},1000);
+			
+			//clearInterval(timer);
+			
+			
+			
+		}
+	
+	
+	function move(obj,str){
+			setInterval(function(){
+				//obj.style.left=obj.offsetLeft+50+"px";
+				//obj.style.top=obj.offsetTop+50+"px";
+				//计时器方法
+			
+				
+			},1000);
+			
+			//clearInterval(timer);
+			
+			
+			
+		}
+		//move(div);
+		
+		
+	
+		};
+		
+		
+	</script>
+	<body>
+		<div id="div"></div>
+		<button id="btn">点击改变</button>
+	</body>
+</html>

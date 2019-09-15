@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * 让计算机明白字符串规则  
+		 * 比如判断电子邮件的格式
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		//创建一个正则表达式的对象
+		var reg=new RegExp("a","i");
+		//reg=/a/i;//使用字面量创建正则
+		//使用|表示或者的意思
+		//[]中括号里面的内容也是或的关系 [a-z]是小写字母[A-Z]表示大写字母[A-z]表示任意字母
+		//这个@就是正则表达式
+		//test()测试   测试里边有没有含有这个字符串  有就返回true  没有就返回flash
+		reg=/@[A-z][A-z].com/;
+		
+		
+		
+		var emil=reg.test("abcde@qq.com");
+		console.log(emil);
+		
+		
+		
+		
+		
+	</script>
+</html>

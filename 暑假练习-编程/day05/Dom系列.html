@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM</title>
+	</head>
+	<style>
+		
+		
+		
+		
+		
+	</style>
+	<body>
+		<input type="checkbox" alt="北京" name="bj" />北京
+		<input type="checkbox" alt="上海" name="bj" />上海
+		<input type="checkbox" alt="广州" name="bj" />广州
+		<input type="checkbox" alt="深圳" name="bj" />深圳
+		<br />
+		<button id="btn">全选</button>
+		<button id="btn1">全不选</button>
+		<button id="btn2">反选</button>
+		<input id="all" type="checkbox" alt="深圳" name="all" />全选/全不选
+	</body>
+	<script type="text/javascript">
+		/*
+		 
+		 * DOM控制  
+		 * 
+		 * 
+		 * 
+		 * */
+		var bj=document.getElementsByName("bj");
+		//var all=document.getElementsByName("all");
+		var btn=document.getElementById("btn");
+		var btn1=document.getElementById("btn1");
+		var btn2=document.getElementById("btn2");
+		var all=document.getElementById("all");
+		
+		
+		//var bj=document.getElementsByTagName("bj");
+		//var inp=document.getElementsByTagName("input");
+		
+		btn.onclick=function(){
+			//bj.checked=true;
+			//alert(bj.length);
+			for(var i=0;i<bj.length;i++){
+				bj[i].checked=true;
+				//全选状态
+			}
+			
+			
+			
+			
+		}
+		
+		//bj.innerHTML="aaaaa";
+		
+		btn1.onclick=function(){
+			for(var i=0;i<bj.length;i++){
+				bj[i].checked=false;
+				//全选状态
+			}
+		}
+		btn2.onclick=function(){
+			for(var i=0;i<bj.length;i++){
+				if(bj[i].checked){
+					bj[i].checked=false;
+					//bj[i].checked=true;
+				}else{
+					bj[i].checked=true;
+				}
+			}
+		}
+		all.onclick=function(){
+			for(var i=0;i<bj.length;i++){
+			if(all.checked){
+				bj[i].checked=true;
+			}
+			else{
+				bj[i].checked=false;
+			}
+		
+		}
+		}
+		//myfunciton();
+	</script>
+</html>

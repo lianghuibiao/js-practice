@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//arguments 是函数对象中的一个隐含的东西    
+		//浏览器每次都会传递两个隐含的参数  this arguments
+		//arguments是一个类数组的对象
+		//它保存了函数的参数
+		//可以通过arguments.length获取实参的长度
+		//可以获取实参  麻烦
+		//arguments[0]表明第一个实参  
+		//arguments有个属性
+		function fun(a,b){
+			console.log(arguments.length);
+			console.log(arguments.callee);//吧对象打印出来了
+			
+		}
+		fun("Aaa","aaaa");
+		
+		
+	</script>
+</html>

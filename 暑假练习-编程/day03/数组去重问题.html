@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		//首先我们创建一个数组
+		var arr=[1,2,3,2,4,5,4,6]
+		//首先要对数组进行遍历提取
+		for (var i=0;i<arr.length;i++) {
+			//console.log(arr[i]);//这样就提取出数组元素了
+			//接下来我们需要对每一个数字进行比较
+			//这里边J不需要等0因为不需要
+			for(var j=i+1;j<arr.length;j++){
+				//接下来我们需要开始删除重复元素  
+				//要进行判断
+				if(arr[i]==arr[j]){
+					//这里涉及到一个问题  要删除谁
+					//这里要删除J
+					arr.splice(j,1);//从j开始删一个
+					//最关键的一步  为了不重复两个数字
+					j--;
+				}
+			}
+		}
+		console.log(arr);
+		
+	</script>
+</html>
