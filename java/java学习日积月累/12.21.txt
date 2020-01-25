@@ -1,0 +1,18 @@
+学习日志
+IO 
+
+以后的你会感谢努力的自己
+
+ //  System.out.println(datas.length);
+	   //一个字符两个字节
+	   datas=str.getBytes("UTF-16LE");
+	//   System.out.println(datas.length);
+	   //GBK
+	   datas=str.getBytes("GBK");
+	   System.out.println(datas.length);
+	    
+
+1学习递归算法
+2面向对象和面向过程
+3对象是什么
+4构造方法 构造器 return 表示两个作用  第一个表示返回值 第二个不需要返回值表示结束程序

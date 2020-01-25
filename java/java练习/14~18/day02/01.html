@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		#p{
+			width: auto;
+			height:50px;
+		}
+		
+		
+	</style>
+	<body>
+		<p id="p"></p>
+	</body>
+	<script>
+		function myfunction(){
+		var a=10;
+		console.log(a);
+		}
+		//myfunction();
+		//直接调用函数  
+		var q=document.getElementById("p");
+	  function text(){
+	  	document.write("aaa");
+	  	//dom  文本写入
+	  	//
+	  	//q.write("bbb");  //不能直接写入
+	  	q.innerHTML="bbbb";//要用innerHTML才可以写出在文本文段中
+	  	q.style.borderColor="blue";
+	  	q.style.borderStyle="dotted";
+	  	q.style.backgroundColor="red";
+	  	//用js来改变CSS属性  获取属性  介质层ID；
+	  	//闭包原理
+//	  	(function(){
+//　　return function(){}
+//      })()
+	  }
+	  text();
+		
+		
+	</script>
+</html>

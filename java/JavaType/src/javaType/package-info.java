@@ -1,0 +1,8 @@
+/**
+ * 
+ */
+/**
+ * @author lianghuibiao
+ *
+ */
+package javaType;

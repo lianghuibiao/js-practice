@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>九宫格点击简单变色</title>
+	</head>
+	<style>
+		.box{
+			width:200px;
+			height: 200px;
+		}
+		button{
+			background-color:blue;
+			width: 60px;
+			height: 60px;
+		}
+	</style>
+	<body>
+		<div class="box">
+			<button id="button1" onclick="c(this.id);"></button>
+			<button id="button2" onclick="c(this.id);"></button>
+			<button id="button3" onclick="c(this.id);"></button>
+			<button id="button4" onclick="c(this.id);"></button>
+			<button id="button5" onclick="c(this.id);"></button>
+			<button id="button6" onclick="c(this.id);"></button>
+			<button id="button7" onclick="c(this.id);"></button>
+			<button id="button8" onclick="c(this.id);"></button>
+			<button id="button9" onclick="c(this.id);"></button>
+		
+			
+			
+		</div>
+	</body>
+	<script>
+		
+function c(id)
+{
+	var obj = document.getElementById(id);
+if(obj.style.backgroundColor == "blue")
+{
+obj.style.backgroundColor = "#FF0000";
+}
+else
+{
+obj.style.backgroundColor = "blue";
+}
+}
+		
+		
+	</script>
+</html>

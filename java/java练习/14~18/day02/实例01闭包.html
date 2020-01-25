@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title></title>
+    <style type="text/css">
+        #animation{width:500px;height:350px;background-color:red;}
+    </style>
+</head>
+<body>
+    <div id="animation">
+        
+    </div>
+    <p>局部变量计数。</p>
+<button type="button" onclick="myFunction()">计数!</button>
+<p id="demo">0</p>
+    <script type="text/javascript">
+    	//自动函数   闭包关键  自己执行 
+        (function(){    //主函数
+        	//初始语句
+            function someAnimation(args){
+                document.getElementById("animation").style.width+=30+"px";
+            }
+            //执行语句
+            //setInterval只有两个参数    一个执行函数  一个是间隔时间
+            setInterval(function(){   
+                for(var i=0;i<10;i++){
+                    setTimeout((function(pos){  //为了重复执行的函数
+                        return function(){
+                            someAnimation(pos);   //闭包关键语句
+                            
+                        }
+                    })(i/10),i*100)//？？？？
+                }
+            },2000);//时间针  第二个参数  间隔时间
+        })()//？？？？
+        //计数器   局部变量计数器
+    var add = (function () {
+    var counter = 0;
+    return function () {
+    	//计数器模式
+    	return counter += 1;
+    }
+    })();
+    //后面函数直接调就行
+function myFunction(){
+    document.getElementById("demo").innerHTML = add();
+}
+    </script>
+</body>
+</html>

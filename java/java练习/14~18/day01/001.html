@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style>
+		
+	
+	</style>
+	<body>
+		<div>
+			
+			
+			
+		</div>
+		
+	</body>
+	<script>
+		//对象  是在堆内存开辟了新的空间  
+		//变量改变不了对象   变量是在栈内存中的
+		//如果两个变量保存的是两个不同的对象 另一个也会收到影响
+		
+		var obj=new Object();
+		obj.name="aaa";
+		//存的是内存地址
+		var obj2=new Object();
+		obj2.name="aaa";
+		//栈内存中保存  
+		var obj3=obj;
+		//两个对象  一模一样都是不同的  栈内存与堆内存
+		//
+		console.log(obj3);
+		//基本数据类型   引用数据类型
+		console.log(obj.name==obj2.name);
+	</script>
+</html>
